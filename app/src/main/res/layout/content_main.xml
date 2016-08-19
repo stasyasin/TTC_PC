@@ -11,6 +11,10 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="pointscalculator.ttr_pc.MainActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,7 +38,7 @@
                 android:text="Teams" />
 
             <EditText
-                android:id="@+id/yellowname"
+                android:id="@+id/yellowName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -46,7 +50,7 @@
                 android:text="@string/yellow" />
 
             <EditText
-                android:id="@+id/bluename"
+                android:id="@+id/blueName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -58,7 +62,7 @@
                 android:text="@string/blue" />
 
             <EditText
-                android:id="@+id/blackname"
+                android:id="@+id/blackName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -70,7 +74,7 @@
                 android:text="@string/black" />
 
             <EditText
-                android:id="@+id/redname"
+                android:id="@+id/redName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -82,7 +86,7 @@
                 android:text="@string/red" />
 
             <EditText
-                android:id="@+id/greenname"
+                android:id="@+id/greenName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -699,6 +703,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
         </LinearLayout>
+
     </LinearLayout>
+</ScrollView>
+
+
 
 </RelativeLayout>

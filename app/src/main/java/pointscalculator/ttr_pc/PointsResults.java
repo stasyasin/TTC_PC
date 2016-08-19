@@ -18,7 +18,7 @@ public class PointsResults extends AppCompatActivity {
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
         // Create text field
-        TextView resultYellowName = new TextView(this);
+        TextView resultYellowName = (TextView) findViewById(R.id.resultYellowName);
         resultYellowName.setTextSize(10);
         resultYellowName.setText(message);
 
