@@ -30,13 +30,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="" />
+                android:text="@string/empty" />
             <TextView
                 android:id="@+id/resultYellowPoints"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="New Text" />
+                android:text="@string/empty" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,13 +49,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="New Text" />
+                android:text="@string/empty" />
             <TextView
                 android:id="@+id/resultBluePoints"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="New Text" />
+                android:text="@string/empty" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -68,13 +68,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="New Text" />
+                android:text="@string/empty" />
             <TextView
                 android:id="@+id/resultBlackPoints"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="New Text" />
+                android:text="@string/empty" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -87,13 +87,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="New Text" />
+                android:text="@string/empty" />
             <TextView
                 android:id="@+id/resultRedPoints"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="New Text" />
+                android:text="@string/empty" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -106,13 +106,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="New Text" />
+                android:text="@string/empty" />
             <TextView
                 android:id="@+id/resultGreenPoints"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="New Text" />
+                android:text="@string/empty" />
         </LinearLayout>
     </LinearLayout>
 

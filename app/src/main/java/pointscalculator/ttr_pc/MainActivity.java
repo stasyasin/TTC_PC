@@ -17,7 +17,16 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    public final static String EXTRA_MESSAGE = "com.metanit.eugene.helloapplication.MESSAGE";
+    public final static String YELLOW_TEAM_NAME = "app.java.pointsCalculator.ttr_pc.MainActivity.YELLOW_TEAM_NAME";
+    public final static String YELLOW_TEAM_RESULTS = "app.java.pointsCalculator.ttr_pc.MainActivity.YELLOW_TEAM_RESULTS";
+    public final static String BLUE_TEAM_NAME = "app.java.pointsCalculator.ttr_pc.MainActivity.BLUE_TEAM_NAME";
+    public final static String BLUE_TEAM_RESULTS = "app.java.pointsCalculator.ttr_pc.MainActivity.BLUE_TEAM_RESULTS";
+    public final static String BLACK_TEAM_NAME = "app.java.pointsCalculator.ttr_pc.MainActivity.BLACK_TEAM_NAME";
+    public final static String BLACK_TEAM_RESULTS = "app.java.pointsCalculator.ttr_pc.MainActivity.BLACK_TEAM_RESULTS";
+    public final static String RED_TEAM_NAME = "app.java.pointsCalculator.ttr_pc.MainActivity.RED_TEAM_NAME";
+    public final static String RED_TEAM_RESULTS = "app.java.pointsCalculator.ttr_pc.MainActivity.RED_TEAM_RESULTS";
+    public final static String GREEN_TEAM_NAME = "app.java.pointsCalculator.ttr_pc.MainActivity.GREEN_TEAM_NAME";
+    public final static String GREEN_TEAM_RESULTS = "app.java.pointsCalculator.ttr_pc.MainActivity.GREEN_TEAM_RESULTS";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,12 +115,26 @@ public class MainActivity extends AppCompatActivity
         // TODO actions here
         Intent intent = new Intent(this, PointsResults.class);
         //take yellowname
-        EditText editText = (EditText) findViewById(R.id.yellowname);
+        EditText editText = (EditText) findViewById(R.id.yellowName);
         //parse to String
         String message = editText.getText().toString();
-// Добавляем с помощью свойства putExtra объект - первый параметр - ключ,
-// второй параметр - значение этого объекта
-        intent.putExtra(EXTRA_MESSAGE, message);
+
+        TeamPointsCounter yellowTeam= new TeamPointsCounter("yellow","1","2","3","4","5","6","2","22",true);
+        TeamPointsCounter blueTeam= new TeamPointsCounter("blue","1","2","3","4","5","6","2","-5",false);
+        TeamPointsCounter blackTeam= new TeamPointsCounter("black","1","2","3","4","5","6","2","0",false);
+        TeamPointsCounter redTeam= new TeamPointsCounter("red","1","2","3","4","5","6","2","5",false);
+        TeamPointsCounter greenTeam= new TeamPointsCounter("green","1","2","3","4","5","6","2","0",false);
+
+        intent.putExtra(YELLOW_TEAM_NAME, yellowTeam.name);
+        intent.putExtra(YELLOW_TEAM_RESULTS, yellowTeam.teamPointsResult.toString());
+        intent.putExtra(BLUE_TEAM_NAME, blueTeam.name);
+        intent.putExtra(BLUE_TEAM_RESULTS, blueTeam.teamPointsResult.toString());
+        intent.putExtra(BLACK_TEAM_NAME, blackTeam.name);
+        intent.putExtra(BLACK_TEAM_RESULTS, blackTeam.teamPointsResult.toString());
+        intent.putExtra(RED_TEAM_NAME, redTeam.name);
+        intent.putExtra(RED_TEAM_RESULTS, redTeam.teamPointsResult.toString());
+        intent.putExtra(GREEN_TEAM_NAME, greenTeam.name);
+        intent.putExtra(GREEN_TEAM_RESULTS, greenTeam.teamPointsResult.toString());
         //Start activity
         startActivity(intent);
     }
