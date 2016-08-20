@@ -12,718 +12,666 @@
     tools:context="pointscalculator.ttr_pc.MainActivity">
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/scrollView">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:orientation="vertical"
-        android:weightSum="11">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="6">
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:weightSum="11">
 
-            <TextView
-                android:layout_width="0dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Teams" />
+                android:orientation="horizontal"
+                android:weightSum="6">
 
-            <EditText
-                android:id="@+id/yellowName"
-                android:layout_width="0dp"
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Teams" />
+
+                <EditText
+                    android:id="@+id/yellowName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:nestedScrollingEnabled="false"
+                    android:text="@string/yellow" />
+
+                <EditText
+                    android:id="@+id/blueName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:nestedScrollingEnabled="false"
+                    android:text="@string/blue" />
+
+                <EditText
+                    android:id="@+id/blackName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:nestedScrollingEnabled="false"
+                    android:text="@string/black" />
+
+                <EditText
+                    android:id="@+id/redName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:nestedScrollingEnabled="false"
+                    android:text="@string/red" />
+
+                <EditText
+                    android:id="@+id/greenName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:nestedScrollingEnabled="false"
+                    android:text="@string/green" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:maxLength="10"
-                android:maxLines="1"
-                android:nestedScrollingEnabled="false"
-                android:text="@string/yellow" />
+                android:orientation="horizontal"
+                android:weightSum="6">
 
-            <EditText
-                android:id="@+id/blueName"
-                android:layout_width="0dp"
+                <ImageView
+                    android:id="@+id/imageTrain1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/yellowTrain1"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/blueTrain1"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/blackTrain1"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/redTrain1"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/greenTrain1"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:maxLength="10"
-                android:maxLines="1"
-                android:nestedScrollingEnabled="false"
-                android:text="@string/blue" />
+                android:orientation="horizontal"
+                android:weightSum="6">
 
-            <EditText
-                android:id="@+id/blackName"
-                android:layout_width="0dp"
+                <ImageView
+                    android:id="@+id/imageTrain2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/yellowTrain2"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/blueTrain2"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/blackTrain2"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/redTrain2"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/greenTrain2"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:maxLength="10"
-                android:maxLines="1"
-                android:nestedScrollingEnabled="false"
-                android:text="@string/black" />
+                android:orientation="horizontal"
+                android:weightSum="6">
 
-            <EditText
-                android:id="@+id/redName"
-                android:layout_width="0dp"
+                <ImageView
+                    android:id="@+id/imageTrain3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/yellowTrain3"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/blueTrain3"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/blackTrain3"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/redTrain3"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/greenTrain3"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:maxLength="10"
-                android:maxLines="1"
-                android:nestedScrollingEnabled="false"
-                android:text="@string/red" />
+                android:orientation="horizontal"
+                android:weightSum="6">
 
-            <EditText
-                android:id="@+id/greenName"
-                android:layout_width="0dp"
+                <ImageView
+                    android:id="@+id/imageTrain4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/yellowTrain4"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/blueTrain4"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/blackTrain4"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/redTrain4"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/greenTrain4"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:maxLength="10"
-                android:maxLines="1"
-                android:nestedScrollingEnabled="false"
-                android:text="@string/green" />
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <ImageView
+                    android:id="@+id/imageTrain5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/yellowTrain5"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/blueTrain5"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/blackTrain5"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/redTrain5"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/greenTrain5"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <ImageView
+                    android:id="@+id/imageTrain6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/yellowTrain6"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/blueTrain6"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/blackTrain6"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/redTrain6"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/greenTrain6"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <ImageView
+                    android:id="@+id/imageStation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/yellowStation"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/blueStation"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/blackStation"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/redStation"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/greenStation"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="countClick"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <ImageView
+                    android:id="@+id/imageQuest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/yellowQuest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:text="@string/zero" />
+
+                <EditText
+                    android:id="@+id/blueQuest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:text="@string/zero" />
+
+                <EditText
+                    android:id="@+id/blackQuest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:text="@string/zero" />
+
+                <EditText
+                    android:id="@+id/redQuest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:text="@string/zero" />
+
+                <EditText
+                    android:id="@+id/greenQuest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <ImageView
+                    android:id="@+id/imageLongestWay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/yellowLongestWay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:text="@string/zero" />
+
+                <EditText
+                    android:id="@+id/blueLongestWay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:text="@string/zero" />
+
+                <EditText
+                    android:id="@+id/blackLongestWay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:text="@string/zero" />
+
+                <EditText
+                    android:id="@+id/redLongestWay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:text="@string/zero" />
+
+                <EditText
+                    android:id="@+id/greenLongestWay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <ImageView
+                    android:id="@+id/imageEmpty1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/calculatePoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:onClick="calculatePoints"
+                    android:text="Calculate Points" />
+
+                <ImageView
+                    android:id="@+id/imageEmpty2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="6">
-
-            <ImageView
-                android:id="@+id/imageTrain1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <!--<EditText-->
-                <!--android:id="@+id/yellowTrain1"-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_weight="1"-->
-                <!--android:ems="10"-->
-                <!--android:inputType="number"-->
-                <!--android:maxLength="2"-->
-                <!--android:text="@string/zero" />-->
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:text="@string/zero"
-                android:id="@+id/button2"
-                android:onClick="countClick"/>
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:text="@string/zero"
-                android:id="@+id/button3"
-                android:onClick="countClick"/>
-
-            <!--<EditText-->
-                <!--android:id="@+id/blueTrain1"-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_weight="1"-->
-                <!--android:ems="10"-->
-                <!--android:inputType="number"-->
-                <!--android:maxLength="2"-->
-                <!--android:text="@string/zero" />-->
-
-            <EditText
-                android:id="@+id/blackTrain1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/redTrain1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/greenTrain1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="6">
-
-            <ImageView
-                android:id="@+id/imageTrain2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <EditText
-                android:id="@+id/yellowTrain2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/blueTrain2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/blackTrain2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/redTrain2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/greenTrain2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="6">
-
-            <ImageView
-                android:id="@+id/imageTrain3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <EditText
-                android:id="@+id/yellowTrain3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/blueTrain3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/blackTrain3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/redTrain3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/greenTrain3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="6">
-
-            <ImageView
-                android:id="@+id/imageTrain4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <EditText
-                android:id="@+id/yellowTrain4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/blueTrain4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/blackTrain4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/redTrain4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/greenTrain4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="6">
-
-            <ImageView
-                android:id="@+id/imageTrain5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <EditText
-                android:id="@+id/yellowTrain5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/blueTrain5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/blackTrain5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/redTrain5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/greenTrain5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="6">
-
-            <ImageView
-                android:id="@+id/imageTrain6"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <EditText
-                android:id="@+id/yellowTrain6"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/blueTrain6"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/blackTrain6"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/redTrain6"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/greenTrain6"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="6">
-
-            <ImageView
-                android:id="@+id/imageStation"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <EditText
-                android:id="@+id/yellowStation"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/blueStation"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/blackStation"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/redStation"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/greenStation"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="6">
-
-            <ImageView
-                android:id="@+id/imageQuest"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <EditText
-                android:id="@+id/yellowQuest"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/blueQuest"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/blackQuest"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/redQuest"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/greenQuest"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="6">
-
-            <ImageView
-                android:id="@+id/imageLongestWay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <EditText
-                android:id="@+id/yellowLongestWay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/blueLongestWay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/blackLongestWay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/redLongestWay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-
-            <EditText
-                android:id="@+id/greenLongestWay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="6">
-
-            <ImageView
-                android:id="@+id/imageEmpty1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:text="Calculate Points"
-                android:onClick="calculatePoints" />
-
-            <ImageView
-                android:id="@+id/imageEmpty2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-        </LinearLayout>
-
-    </LinearLayout>
-</ScrollView>
-
-
+    </ScrollView>
 
 
 </RelativeLayout>

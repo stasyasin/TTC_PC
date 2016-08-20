@@ -147,10 +147,26 @@ public class MainActivity extends AppCompatActivity
         Integer idButton = view.getId();
         Button button = (Button) findViewById(idButton);
         Integer value = Integer.parseInt(button.getText().toString());
-        if (value == 10) {
-            value = 1;
-        } else {
-            value++;
+        switch (idButton) {
+            case R.id.yellowStation:
+            case R.id.blueStation:
+            case R.id.blackStation:
+            case R.id.redStation:
+            case R.id.greenStation:
+                if (value == 3) {
+                    value = 1;
+                } else {
+                    value++;
+                }
+                break;
+            default:
+                if (value == 10) {
+                    value = 1;
+                } else {
+                    value++;
+                }
+                break;
+
         }
 
         button.setText(value.toString());
