@@ -111,25 +111,41 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
-            <EditText
-                android:id="@+id/yellowTrain1"
+            <!--<EditText-->
+                <!--android:id="@+id/yellowTrain1"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:ems="10"-->
+                <!--android:inputType="number"-->
+                <!--android:maxLength="2"-->
+                <!--android:text="@string/zero" />-->
+            <Button
+                style="?android:attr/buttonStyleSmall"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
+                android:layout_height="match_parent"
+                android:text="@string/zero"
+                android:id="@+id/button2"
+                android:onClick="countClick"/>
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/zero"
+                android:id="@+id/button3"
+                android:onClick="countClick"/>
 
-            <EditText
-                android:id="@+id/blueTrain1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:maxLength="2"
-                android:text="@string/zero" />
+            <!--<EditText-->
+                <!--android:id="@+id/blueTrain1"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:ems="10"-->
+                <!--android:inputType="number"-->
+                <!--android:maxLength="2"-->
+                <!--android:text="@string/zero" />-->
 
             <EditText
                 android:id="@+id/blackTrain1"
@@ -706,6 +722,7 @@
 
     </LinearLayout>
 </ScrollView>
+
 
 
 

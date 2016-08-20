@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity
@@ -110,7 +111,10 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-    /** Method to click on CalculatePoints button*/
+
+    /**
+     * Method to click on CalculatePoints button
+     */
     public void calculatePoints(View view) {
         // TODO actions here
         Intent intent = new Intent(this, PointsResults.class);
@@ -119,11 +123,11 @@ public class MainActivity extends AppCompatActivity
         //parse to String
         String message = editText.getText().toString();
 
-        TeamPointsCounter yellowTeam= new TeamPointsCounter("yellow","1","2","3","4","5","6","2","22",true);
-        TeamPointsCounter blueTeam= new TeamPointsCounter("blue","1","2","3","4","5","6","2","-5",false);
-        TeamPointsCounter blackTeam= new TeamPointsCounter("black","1","2","3","4","5","6","2","0",false);
-        TeamPointsCounter redTeam= new TeamPointsCounter("red","1","2","3","4","5","6","2","5",false);
-        TeamPointsCounter greenTeam= new TeamPointsCounter("green","1","2","3","4","5","6","2","0",false);
+        TeamPointsCounter yellowTeam = new TeamPointsCounter("yellow", "1", "2", "3", "4", "5", "6", "2", "22", true);
+        TeamPointsCounter blueTeam = new TeamPointsCounter("blue", "1", "2", "3", "4", "5", "6", "2", "-5", false);
+        TeamPointsCounter blackTeam = new TeamPointsCounter("black", "1", "2", "3", "4", "5", "6", "2", "0", false);
+        TeamPointsCounter redTeam = new TeamPointsCounter("red", "1", "2", "3", "4", "5", "6", "2", "5", false);
+        TeamPointsCounter greenTeam = new TeamPointsCounter("green", "1", "2", "3", "4", "5", "6", "2", "0", false);
 
         intent.putExtra(YELLOW_TEAM_NAME, yellowTeam.name);
         intent.putExtra(YELLOW_TEAM_RESULTS, yellowTeam.teamPointsResult.toString());
@@ -137,5 +141,19 @@ public class MainActivity extends AppCompatActivity
         intent.putExtra(GREEN_TEAM_RESULTS, greenTeam.teamPointsResult.toString());
         //Start activity
         startActivity(intent);
+    }
+
+    public void countClick(View view) {
+        Integer idButton = view.getId();
+        Button button = (Button) findViewById(idButton);
+        Integer value = Integer.parseInt(button.getText().toString());
+        if (value == 10) {
+            value = 1;
+        } else {
+            value++;
+        }
+
+        button.setText(value.toString());
+
     }
 }
