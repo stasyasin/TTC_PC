@@ -148,11 +148,11 @@ public class MainActivity extends AppCompatActivity
         Button button = (Button) findViewById(idButton);
         Integer value = Integer.parseInt(button.getText().toString());
         switch (idButton) {
-            case R.id.yellowStation:
-            case R.id.blueStation:
-            case R.id.blackStation:
-            case R.id.redStation:
-            case R.id.greenStation:
+            case R.id.button17:
+            case R.id.button27:
+            case R.id.button37:
+            case R.id.button47:
+            case R.id.button57:
                 if (value == 3) {
                     value = 1;
                 } else {
