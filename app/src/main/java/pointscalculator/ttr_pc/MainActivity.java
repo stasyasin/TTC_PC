@@ -15,6 +15,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -119,9 +123,16 @@ public class MainActivity extends AppCompatActivity
         // TODO actions here
         Intent intent = new Intent(this, PointsResults.class);
         //take yellowname
-        EditText editText = (EditText) findViewById(R.id.yellowName);
+//        EditText editText = (EditText) findViewById(R.id.teamName1);
         //parse to String
-        String message = editText.getText().toString();
+//        String message = editText.getText().toString();
+
+        List<String> yellowInputData = getInputData(1);
+        List<String> blueInputData = getInputData(2);
+        List<String> blackInputData = getInputData(3);
+        List<String> redInputData = getInputData(4);
+        List<String> greenInputData = getInputData(5);
+
 
         TeamPointsCounter yellowTeam = new TeamPointsCounter("yellow", "1", "2", "3", "4", "5", "6", "2", "22", true);
         TeamPointsCounter blueTeam = new TeamPointsCounter("blue", "1", "2", "3", "4", "5", "6", "2", "-5", false);
@@ -154,22 +165,44 @@ public class MainActivity extends AppCompatActivity
             case R.id.button47:
             case R.id.button57:
                 if (value == 3) {
-                    value = 1;
+                    value = 0;
                 } else {
                     value++;
                 }
                 break;
             default:
                 if (value == 10) {
-                    value = 1;
+                    value = 0;
                 } else {
                     value++;
                 }
                 break;
-
         }
 
         button.setText(value.toString());
+    }
 
+    private List<String> getInputData(int columnInd) {
+        List<String> inputData = new ArrayList<String>();
+        Integer resID = getResources().getIdentifier("teamName" + columnInd, "id", this.getPackageName());//why resId is 0?
+        resID = getResources().getIdentifier("teamName1","id", this.getPackageName());//TODO why doesn't work?
+        EditText editText = (EditText) findViewById(resID);
+        inputData.add(editText.getText().toString());
+        for (int i = 1; i <= 7; i++) {
+            resID = getResources().getIdentifier("button" + columnInd + i, "id", "pointscalculator.ttr_pc");
+            Button button = (Button) findViewById(resID);
+            inputData.add(button.getText().toString());
+        }
+        resID = getResources().getIdentifier("quest" + columnInd, "id", "pointscalculator.ttr_pc");
+        editText = (EditText) findViewById(resID);
+        inputData.add(editText.getText().toString());
+        resID = getResources().getIdentifier("radioButton" + columnInd, "id", "pointscalculator.ttr_pc");
+        RadioButton radioButton = (RadioButton) findViewById(resID);
+        if (radioButton.isChecked()) {
+            inputData.add("true");
+        } else {
+            inputData.add("false");
+        }
+        return inputData;
     }
 }

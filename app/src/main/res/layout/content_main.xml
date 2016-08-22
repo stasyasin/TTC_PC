@@ -39,7 +39,7 @@
                     android:text="Teams" />
 
                 <EditText
-                    android:id="@+id/yellowName"
+                    android:id="@+id/teamName1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -51,7 +51,7 @@
                     android:text="@string/yellow" />
 
                 <EditText
-                    android:id="@+id/blueName"
+                    android:id="@+id/teamName2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -63,7 +63,7 @@
                     android:text="@string/blue" />
 
                 <EditText
-                    android:id="@+id/blackName"
+                    android:id="@+id/teamName3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -75,7 +75,7 @@
                     android:text="@string/black" />
 
                 <EditText
-                    android:id="@+id/redName"
+                    android:id="@+id/teamName4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -87,7 +87,7 @@
                     android:text="@string/red" />
 
                 <EditText
-                    android:id="@+id/greenName"
+                    android:id="@+id/teamName5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -528,7 +528,7 @@
                     android:layout_weight="1" />
 
                 <EditText
-                    android:id="@+id/yellowQuest"
+                    android:id="@+id/quest1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -538,7 +538,7 @@
                     android:text="@string/zero" />
 
                 <EditText
-                    android:id="@+id/blueQuest"
+                    android:id="@+id/quest2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -548,7 +548,7 @@
                     android:text="@string/zero" />
 
                 <EditText
-                    android:id="@+id/blackQuest"
+                    android:id="@+id/quest3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -558,7 +558,7 @@
                     android:text="@string/zero" />
 
                 <EditText
-                    android:id="@+id/redQuest"
+                    android:id="@+id/quest4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -568,7 +568,7 @@
                     android:text="@string/zero" />
 
                 <EditText
-                    android:id="@+id/greenQuest"
+                    android:id="@+id/quest5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
