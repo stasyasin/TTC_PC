@@ -180,7 +180,11 @@ public class MainActivity extends AppCompatActivity
     private List<String> getInputData(int columnInd) {
         List<String> inputData = new ArrayList<String>();
         EditText editText = (EditText) findViewById(getResources().getIdentifier("teamName1", "id", this.getPackageName()));
-        inputData.add(editText.getText().toString());
+        if (!editText.getText().toString().equals("")) {
+            inputData.add(editText.getText().toString());
+        } else {
+            inputData.add("Team" + columnInd);
+        }
         for (int i = 1; i <= 7; i++) {
             Button button = (Button) findViewById(getResources().getIdentifier("button" + columnInd + i, "id", this.getPackageName()));
             inputData.add(button.getText().toString());
