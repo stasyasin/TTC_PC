@@ -534,7 +534,7 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:inputType="number"
-                    android:maxLength="2"
+                    android:maxLength="3"
                     android:text="@string/zero" />
 
                 <EditText
@@ -544,7 +544,7 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:inputType="number"
-                    android:maxLength="2"
+                    android:maxLength="3"
                     android:text="@string/zero" />
 
                 <EditText
@@ -554,7 +554,7 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:inputType="number"
-                    android:maxLength="2"
+                    android:maxLength="3"
                     android:text="@string/zero" />
 
                 <EditText
@@ -564,7 +564,7 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:inputType="number"
-                    android:maxLength="2"
+                    android:maxLength="3"
                     android:text="@string/zero" />
 
                 <EditText
@@ -574,7 +574,7 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:inputType="number"
-                    android:maxLength="2"
+                    android:maxLength="3"
                     android:text="@string/zero" />
             </LinearLayout>
 

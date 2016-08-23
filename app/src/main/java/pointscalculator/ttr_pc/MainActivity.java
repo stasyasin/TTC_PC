@@ -129,7 +129,6 @@ public class MainActivity extends AppCompatActivity
         List<String> redInputData = getInputData(4);
         List<String> greenInputData = getInputData(5);
 
-
         TeamPointsCounter yellowTeam = new TeamPointsCounter(yellowInputData);
         TeamPointsCounter blueTeam = new TeamPointsCounter(blueInputData);
         TeamPointsCounter blackTeam = new TeamPointsCounter(blackInputData);
