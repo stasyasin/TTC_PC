@@ -186,7 +186,11 @@ public class MainActivity extends AppCompatActivity
             inputData.add(button.getText().toString());
         }
         editText = (EditText) findViewById(getResources().getIdentifier("quest" + columnInd, "id", this.getPackageName()));
-        inputData.add(editText.getText().toString());
+        if (!editText.getText().toString().equals("")) {
+            inputData.add(editText.getText().toString());
+        } else {
+            inputData.add("0");
+        }
         RadioButton radioButton = (RadioButton) findViewById(getResources().getIdentifier("radioButton" + columnInd, "id", this.getPackageName()));
         if (radioButton.isChecked()) {
             inputData.add("true");

@@ -535,7 +535,8 @@
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="3"
-                    android:text="@string/zero" />
+                    android:text="@string/zero"
+                    android:digits="0123456789-"/>
 
                 <EditText
                     android:id="@+id/quest2"
@@ -545,7 +546,8 @@
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="3"
-                    android:text="@string/zero" />
+                    android:text="@string/zero"
+                    android:digits="0123456789-"/>
 
                 <EditText
                     android:id="@+id/quest3"
@@ -555,7 +557,8 @@
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="3"
-                    android:text="@string/zero" />
+                    android:text="@string/zero"
+                    android:digits="0123456789-"/>
 
                 <EditText
                     android:id="@+id/quest4"
@@ -565,7 +568,8 @@
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="3"
-                    android:text="@string/zero" />
+                    android:text="@string/zero"
+                    android:digits="0123456789-"/>
 
                 <EditText
                     android:id="@+id/quest5"
@@ -575,7 +579,8 @@
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="3"
-                    android:text="@string/zero" />
+                    android:text="@string/zero"
+                    android:digits="0123456789-"/>
             </LinearLayout>
 
             <LinearLayout
