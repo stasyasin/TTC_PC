@@ -534,8 +534,9 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:inputType="number"
-                    android:maxLength="2"
-                    android:text="@string/zero" />
+                    android:maxLength="3"
+                    android:text="@string/zero"
+                    android:digits="0123456789-"/>
 
                 <EditText
                     android:id="@+id/quest2"
@@ -544,8 +545,9 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:inputType="number"
-                    android:maxLength="2"
-                    android:text="@string/zero" />
+                    android:maxLength="3"
+                    android:text="@string/zero"
+                    android:digits="0123456789-"/>
 
                 <EditText
                     android:id="@+id/quest3"
@@ -554,8 +556,9 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:inputType="number"
-                    android:maxLength="2"
-                    android:text="@string/zero" />
+                    android:maxLength="3"
+                    android:text="@string/zero"
+                    android:digits="0123456789-"/>
 
                 <EditText
                     android:id="@+id/quest4"
@@ -564,8 +567,9 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:inputType="number"
-                    android:maxLength="2"
-                    android:text="@string/zero" />
+                    android:maxLength="3"
+                    android:text="@string/zero"
+                    android:digits="0123456789-"/>
 
                 <EditText
                     android:id="@+id/quest5"
@@ -574,8 +578,9 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:inputType="number"
-                    android:maxLength="2"
-                    android:text="@string/zero" />
+                    android:maxLength="3"
+                    android:text="@string/zero"
+                    android:digits="0123456789-"/>
             </LinearLayout>
 
             <LinearLayout

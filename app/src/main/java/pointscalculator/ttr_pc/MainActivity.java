@@ -122,10 +122,6 @@ public class MainActivity extends AppCompatActivity
     public void calculatePoints(View view) {
         // TODO actions here
         Intent intent = new Intent(this, PointsResults.class);
-        //take yellowname
-//        EditText editText = (EditText) findViewById(R.id.teamName1);
-        //parse to String
-//        String message = editText.getText().toString();
 
         List<String> yellowInputData = getInputData(1);
         List<String> blueInputData = getInputData(2);
@@ -133,12 +129,11 @@ public class MainActivity extends AppCompatActivity
         List<String> redInputData = getInputData(4);
         List<String> greenInputData = getInputData(5);
 
-
-        TeamPointsCounter yellowTeam = new TeamPointsCounter("yellow", "1", "2", "3", "4", "5", "6", "2", "22", true);
-        TeamPointsCounter blueTeam = new TeamPointsCounter("blue", "1", "2", "3", "4", "5", "6", "2", "-5", false);
-        TeamPointsCounter blackTeam = new TeamPointsCounter("black", "1", "2", "3", "4", "5", "6", "2", "0", false);
-        TeamPointsCounter redTeam = new TeamPointsCounter("red", "1", "2", "3", "4", "5", "6", "2", "5", false);
-        TeamPointsCounter greenTeam = new TeamPointsCounter("green", "1", "2", "3", "4", "5", "6", "2", "0", false);
+        TeamPointsCounter yellowTeam = new TeamPointsCounter(yellowInputData);
+        TeamPointsCounter blueTeam = new TeamPointsCounter(blueInputData);
+        TeamPointsCounter blackTeam = new TeamPointsCounter(blackInputData);
+        TeamPointsCounter redTeam = new TeamPointsCounter(redInputData);
+        TeamPointsCounter greenTeam = new TeamPointsCounter(greenInputData);
 
         intent.putExtra(YELLOW_TEAM_NAME, yellowTeam.name);
         intent.putExtra(YELLOW_TEAM_RESULTS, yellowTeam.teamPointsResult.toString());
@@ -150,7 +145,7 @@ public class MainActivity extends AppCompatActivity
         intent.putExtra(RED_TEAM_RESULTS, redTeam.teamPointsResult.toString());
         intent.putExtra(GREEN_TEAM_NAME, greenTeam.name);
         intent.putExtra(GREEN_TEAM_RESULTS, greenTeam.teamPointsResult.toString());
-        //Start activity
+
         startActivity(intent);
     }
 
@@ -184,20 +179,19 @@ public class MainActivity extends AppCompatActivity
 
     private List<String> getInputData(int columnInd) {
         List<String> inputData = new ArrayList<String>();
-        Integer resID = getResources().getIdentifier("teamName" + columnInd, "id", this.getPackageName());//why resId is 0?
-        resID = getResources().getIdentifier("teamName1","id", this.getPackageName());//TODO why doesn't work?
-        EditText editText = (EditText) findViewById(resID);
+        EditText editText = (EditText) findViewById(getResources().getIdentifier("teamName1", "id", this.getPackageName()));
         inputData.add(editText.getText().toString());
         for (int i = 1; i <= 7; i++) {
-            resID = getResources().getIdentifier("button" + columnInd + i, "id", "pointscalculator.ttr_pc");
-            Button button = (Button) findViewById(resID);
+            Button button = (Button) findViewById(getResources().getIdentifier("button" + columnInd + i, "id", this.getPackageName()));
             inputData.add(button.getText().toString());
         }
-        resID = getResources().getIdentifier("quest" + columnInd, "id", "pointscalculator.ttr_pc");
-        editText = (EditText) findViewById(resID);
-        inputData.add(editText.getText().toString());
-        resID = getResources().getIdentifier("radioButton" + columnInd, "id", "pointscalculator.ttr_pc");
-        RadioButton radioButton = (RadioButton) findViewById(resID);
+        editText = (EditText) findViewById(getResources().getIdentifier("quest" + columnInd, "id", this.getPackageName()));
+        if (!editText.getText().toString().equals("")) {
+            inputData.add(editText.getText().toString());
+        } else {
+            inputData.add("0");
+        }
+        RadioButton radioButton = (RadioButton) findViewById(getResources().getIdentifier("radioButton" + columnInd, "id", this.getPackageName()));
         if (radioButton.isChecked()) {
             inputData.add("true");
         } else {
