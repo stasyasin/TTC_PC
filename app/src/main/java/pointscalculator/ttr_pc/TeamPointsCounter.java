@@ -1,11 +1,12 @@
 package pointscalculator.ttr_pc;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by Stasyan on 8/19/2016.
  */
-public class TeamPointsCounter {
+public class TeamPointsCounter implements Serializable {
     String name;
     String train1;
     String train2;
@@ -24,25 +25,6 @@ public class TeamPointsCounter {
     Integer coef5 = 15;
     Integer coef6 = 21;
 
-    public TeamPointsCounter(String name, String train1, String train2, String train3, String train4, String train5, String train6, String station, String quest, Boolean longestWay) {
-        this.name = name;
-        this.train1 = train1;
-        this.train2 = train2;
-        this.train3 = train3;
-        this.train4 = train4;
-        this.train5 = train5;
-        this.train6 = train6;
-        this.station = station;
-        this.quest = quest;
-        this.longestWay = longestWay;
-        this.teamPointsResult = parseToInt(train1) * coef1 + parseToInt(train2) * coef2 +
-                +parseToInt(train3) * coef3 + parseToInt(train4) * coef4 + parseToInt(train5) * coef5 +
-                +parseToInt(train6) * coef6 + parseToInt(station) * 3 + parseToInt(quest);
-        if (longestWay) {
-            this.teamPointsResult = this.teamPointsResult + 10;
-        }
-    }
-
     public TeamPointsCounter(List<String> inputData) {
         this.name = inputData.get(0);
         this.train1 = inputData.get(1);
@@ -56,7 +38,7 @@ public class TeamPointsCounter {
         this.longestWay = Boolean.parseBoolean(inputData.get(9));
         this.teamPointsResult = parseToInt(train1) * coef1 + parseToInt(train2) * coef2 +
                 +parseToInt(train3) * coef3 + parseToInt(train4) * coef4 + parseToInt(train5) * coef5 +
-                +parseToInt(train6) * coef6 + parseToInt(station) * 3 + parseToInt(quest);
+                +parseToInt(train6) * coef6 + parseToInt(station) * 4 + parseToInt(quest);
         if (longestWay) {
             this.teamPointsResult = this.teamPointsResult + 10;
         }

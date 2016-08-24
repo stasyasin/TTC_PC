@@ -30,38 +30,31 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:weightSum="5">
+            android:weightSum="4">
 
             <TextView
-                android:id="@+id/resultYellowEmpty1"
+                android:id="@+id/emptyTeam1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="" />
 
             <TextView
-                android:id="@+id/resultYellowName"
+                android:id="@+id/teamName1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/empty" />
 
             <TextView
-                android:id="@+id/resultYellowPoints"
+                android:id="@+id/teamResult1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/empty" />
 
             <TextView
-                android:id="@+id/resultYellowWinner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="" />
-
-            <TextView
-                android:id="@+id/resultYellowEmpty2"
+                android:id="@+id/empty2Team1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -73,38 +66,32 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:weightSum="5">
+            android:weightSum="4">
+
 
             <TextView
-                android:id="@+id/resultBlueEmpty1"
+                android:id="@+id/emptyTeam2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="" />
 
             <TextView
-                android:id="@+id/resultBlueName"
+                android:id="@+id/teamName2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/empty" />
 
             <TextView
-                android:id="@+id/resultBluePoints"
+                android:id="@+id/teamResult2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/empty" />
 
             <TextView
-                android:id="@+id/resultBlueWinner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="" />
-
-            <TextView
-                android:id="@+id/resultBlueEmpty2"
+                android:id="@+id/empty2Team2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -116,38 +103,32 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:weightSum="5">
+            android:weightSum="4">
+
 
             <TextView
-                android:id="@+id/resultBlackEmpty1"
+                android:id="@+id/emptyTeam3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="" />
 
             <TextView
-                android:id="@+id/resultBlackName"
+                android:id="@+id/teamName3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/empty" />
 
             <TextView
-                android:id="@+id/resultBlackPoints"
+                android:id="@+id/teamResult3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/empty" />
 
             <TextView
-                android:id="@+id/resultBlackWinner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="" />
-
-            <TextView
-                android:id="@+id/resultBlackEmpty2"
+                android:id="@+id/empty2Team3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -159,38 +140,32 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:weightSum="5">
+            android:weightSum="4">
+
 
             <TextView
-                android:id="@+id/resultRedEmpty1"
+                android:id="@+id/emptyTeam4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="" />
 
             <TextView
-                android:id="@+id/resultRedName"
+                android:id="@+id/teamName4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/empty" />
 
             <TextView
-                android:id="@+id/resultRedPoints"
+                android:id="@+id/teamResult4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/empty" />
 
             <TextView
-                android:id="@+id/resultRedWinner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="" />
-
-            <TextView
-                android:id="@+id/resultRedEmpty2"
+                android:id="@+id/empty2Team4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -202,38 +177,32 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:weightSum="5">
+            android:weightSum="4">
+
 
             <TextView
-                android:id="@+id/resultGreenEmpty1"
+                android:id="@+id/emptyTeam5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="" />
 
             <TextView
-                android:id="@+id/resultGreenName"
+                android:id="@+id/teamName5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/empty" />
 
             <TextView
-                android:id="@+id/resultGreenPoints"
+                android:id="@+id/teamResult5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/empty" />
 
             <TextView
-                android:id="@+id/resultGreenWinner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="" />
-
-            <TextView
-                android:id="@+id/resultGreenEmpty2"
+                android:id="@+id/empty2Team5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
