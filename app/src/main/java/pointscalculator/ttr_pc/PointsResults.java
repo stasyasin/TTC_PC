@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class PointsResults extends AppCompatActivity {
 
     @Override
@@ -26,27 +28,29 @@ public class PointsResults extends AppCompatActivity {
         String finalGreenName = intent.getStringExtra(MainActivity.GREEN_TEAM_NAME);
         String finalGreenPointsResult = intent.getStringExtra(MainActivity.GREEN_TEAM_RESULTS);
 
+        List<TeamPointsCounter> allTeamsData= (List<TeamPointsCounter>) intent.getExtras().getSerializable(MainActivity.TEAMS_OBJECTS);
+
         // Create text field
-        TextView resultYellowName = (TextView) findViewById(R.id.resultYellowName);
+        TextView resultYellowName = (TextView) findViewById(R.id.teamName1);
 //        resultYellowName.setTextSize(10);
         resultYellowName.setText(finalYellowName);
-        TextView resultYellowPoints = (TextView) findViewById(R.id.resultYellowPoints);
+        TextView resultYellowPoints = (TextView) findViewById(R.id.teamResult1);
         resultYellowPoints.setText(finalYellowPointsResult);
-        TextView resultBlueName = (TextView) findViewById(R.id.resultBlueName);
+        TextView resultBlueName = (TextView) findViewById(R.id.teamName2);
         resultBlueName.setText(finalBlueName);
-        TextView resultBluePoints = (TextView) findViewById(R.id.resultBluePoints);
+        TextView resultBluePoints = (TextView) findViewById(R.id.teamResult2);
         resultBluePoints.setText(finalBluePointsResult);
-        TextView resultBlackName = (TextView) findViewById(R.id.resultBlackName);
+        TextView resultBlackName = (TextView) findViewById(R.id.teamName3);
         resultBlackName.setText(finalBlackName);
-        TextView resultBlackPoints = (TextView) findViewById(R.id.resultBlackPoints);
+        TextView resultBlackPoints = (TextView) findViewById(R.id.teamResult3);
         resultBlackPoints.setText(finalBlackPointsResult);
-        TextView resultRedName = (TextView) findViewById(R.id.resultRedName);
+        TextView resultRedName = (TextView) findViewById(R.id.teamName4);
         resultRedName.setText(finalRedName);
-        TextView resultRedPoints = (TextView) findViewById(R.id.resultRedPoints);
+        TextView resultRedPoints = (TextView) findViewById(R.id.teamResult4);
         resultRedPoints.setText(finalRedPointsResult);
-        TextView resultGreenName = (TextView) findViewById(R.id.resultGreenName);
+        TextView resultGreenName = (TextView) findViewById(R.id.teamName5);
         resultGreenName.setText(finalGreenName);
-        TextView resultGreenPoints = (TextView) findViewById(R.id.resultGreenPoints);
+        TextView resultGreenPoints = (TextView) findViewById(R.id.teamResult5);
         resultGreenPoints.setText(finalGreenPointsResult);
 
         calculateWinner();

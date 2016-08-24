@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity
     public final static String RED_TEAM_RESULTS = "app.java.pointsCalculator.ttr_pc.MainActivity.RED_TEAM_RESULTS";
     public final static String GREEN_TEAM_NAME = "app.java.pointsCalculator.ttr_pc.MainActivity.GREEN_TEAM_NAME";
     public final static String GREEN_TEAM_RESULTS = "app.java.pointsCalculator.ttr_pc.MainActivity.GREEN_TEAM_RESULTS";
+    public final static String TEAMS_OBJECTS = "app.java.pointsCalculator.ttr_pc.MainActivity.TEAMS_OBJECTS";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,12 +130,18 @@ public class MainActivity extends AppCompatActivity
         List<String> blackInputData = getInputData(3);
         List<String> redInputData = getInputData(4);
         List<String> greenInputData = getInputData(5);
+        List<TeamPointsCounter> allTeamsData = new ArrayList<TeamPointsCounter>();
 
         TeamPointsCounter yellowTeam = new TeamPointsCounter(yellowInputData);
         TeamPointsCounter blueTeam = new TeamPointsCounter(blueInputData);
         TeamPointsCounter blackTeam = new TeamPointsCounter(blackInputData);
         TeamPointsCounter redTeam = new TeamPointsCounter(redInputData);
         TeamPointsCounter greenTeam = new TeamPointsCounter(greenInputData);
+        allTeamsData.add(yellowTeam);//refactor to call in new method
+        allTeamsData.add(blueTeam);
+        allTeamsData.add(blackTeam);
+        allTeamsData.add(redTeam);
+        allTeamsData.add(greenTeam);
 
         intent.putExtra(YELLOW_TEAM_NAME, yellowTeam.name);
         intent.putExtra(YELLOW_TEAM_RESULTS, yellowTeam.teamPointsResult.toString());
@@ -145,6 +153,8 @@ public class MainActivity extends AppCompatActivity
         intent.putExtra(RED_TEAM_RESULTS, redTeam.teamPointsResult.toString());
         intent.putExtra(GREEN_TEAM_NAME, greenTeam.name);
         intent.putExtra(GREEN_TEAM_RESULTS, greenTeam.teamPointsResult.toString());
+
+        intent.putExtra(MainActivity.TEAMS_OBJECTS, (Serializable) allTeamsData);
 
         startActivity(intent);
     }
