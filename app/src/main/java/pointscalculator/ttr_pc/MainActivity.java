@@ -213,4 +213,20 @@ public class MainActivity extends AppCompatActivity
         }
         return inputData;
     }
+
+    public void refreshPage(View view) {
+        for (int i = 1; i <= 5; i++) {
+            EditText editText = (EditText) findViewById(getResources().getIdentifier("teamName" + i, "id", this.getPackageName()));
+            editText.setText(getResources().getIdentifier("teamName" + i, "string", this.getPackageName()));
+            for (int j = 1; j <= 7; j++) {
+                Button button = (Button) findViewById(getResources().getIdentifier("button" + i + j, "id", this.getPackageName()));
+                button.setText("0");
+            }
+            editText = (EditText) findViewById(getResources().getIdentifier("quest" + i, "id", this.getPackageName()));
+            editText.setText("0");
+            RadioButton radioButton = (RadioButton) findViewById(getResources().getIdentifier("radioButton" + i, "id", this.getPackageName()));
+            radioButton.setChecked(false);
+        }
+
+    }
 }
