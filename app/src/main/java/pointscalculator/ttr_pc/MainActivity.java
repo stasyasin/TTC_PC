@@ -23,16 +23,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    public final static String YELLOW_TEAM_NAME = "app.java.pointsCalculator.ttr_pc.MainActivity.YELLOW_TEAM_NAME";
-    public final static String YELLOW_TEAM_RESULTS = "app.java.pointsCalculator.ttr_pc.MainActivity.YELLOW_TEAM_RESULTS";
-    public final static String BLUE_TEAM_NAME = "app.java.pointsCalculator.ttr_pc.MainActivity.BLUE_TEAM_NAME";
-    public final static String BLUE_TEAM_RESULTS = "app.java.pointsCalculator.ttr_pc.MainActivity.BLUE_TEAM_RESULTS";
-    public final static String BLACK_TEAM_NAME = "app.java.pointsCalculator.ttr_pc.MainActivity.BLACK_TEAM_NAME";
-    public final static String BLACK_TEAM_RESULTS = "app.java.pointsCalculator.ttr_pc.MainActivity.BLACK_TEAM_RESULTS";
-    public final static String RED_TEAM_NAME = "app.java.pointsCalculator.ttr_pc.MainActivity.RED_TEAM_NAME";
-    public final static String RED_TEAM_RESULTS = "app.java.pointsCalculator.ttr_pc.MainActivity.RED_TEAM_RESULTS";
-    public final static String GREEN_TEAM_NAME = "app.java.pointsCalculator.ttr_pc.MainActivity.GREEN_TEAM_NAME";
-    public final static String GREEN_TEAM_RESULTS = "app.java.pointsCalculator.ttr_pc.MainActivity.GREEN_TEAM_RESULTS";
     public final static String TEAMS_OBJECTS = "app.java.pointsCalculator.ttr_pc.MainActivity.TEAMS_OBJECTS";
 
     @Override
@@ -122,7 +112,6 @@ public class MainActivity extends AppCompatActivity
      * Method to click on CalculatePoints button
      */
     public void calculatePoints(View view) {
-        // TODO actions here
         Intent intent = new Intent(this, PointsResults.class);
 
         List<String> yellowInputData = getInputData(1);
@@ -132,32 +121,15 @@ public class MainActivity extends AppCompatActivity
         List<String> greenInputData = getInputData(5);
         List<TeamPointsCounter> allTeamsData = new ArrayList<TeamPointsCounter>();
 
-        TeamPointsCounter yellowTeam = new TeamPointsCounter(yellowInputData);
-        TeamPointsCounter blueTeam = new TeamPointsCounter(blueInputData);
-        TeamPointsCounter blackTeam = new TeamPointsCounter(blackInputData);
-        TeamPointsCounter redTeam = new TeamPointsCounter(redInputData);
-        TeamPointsCounter greenTeam = new TeamPointsCounter(greenInputData);
-        allTeamsData.add(yellowTeam);//refactor to call in new method
-        allTeamsData.add(blueTeam);
-        allTeamsData.add(blackTeam);
-        allTeamsData.add(redTeam);
-        allTeamsData.add(greenTeam);
+        allTeamsData.add(new TeamPointsCounter(yellowInputData));
+        allTeamsData.add(new TeamPointsCounter(blueInputData));
+        allTeamsData.add(new TeamPointsCounter(blackInputData));
+        allTeamsData.add(new TeamPointsCounter(redInputData));
+        allTeamsData.add(new TeamPointsCounter(greenInputData));
 
-        intent.putExtra(YELLOW_TEAM_NAME, yellowTeam.name);
-        intent.putExtra(YELLOW_TEAM_RESULTS, yellowTeam.teamPointsResult.toString());
-        intent.putExtra(BLUE_TEAM_NAME, blueTeam.name);
-        intent.putExtra(BLUE_TEAM_RESULTS, blueTeam.teamPointsResult.toString());
-        intent.putExtra(BLACK_TEAM_NAME, blackTeam.name);
-        intent.putExtra(BLACK_TEAM_RESULTS, blackTeam.teamPointsResult.toString());
-        intent.putExtra(RED_TEAM_NAME, redTeam.name);
-        intent.putExtra(RED_TEAM_RESULTS, redTeam.teamPointsResult.toString());
-        intent.putExtra(GREEN_TEAM_NAME, greenTeam.name);
-        intent.putExtra(GREEN_TEAM_RESULTS, greenTeam.teamPointsResult.toString());
+        allTeamsData = TeamPointsCounter.sortByPoints(allTeamsData);
 
-        List<TeamPointsCounter> allTeamsDataSorted = TeamPointsCounter.sortByPoints(allTeamsData);
-
-        intent.putExtra(MainActivity.TEAMS_OBJECTS, (Serializable) allTeamsDataSorted);
-
+        intent.putExtra(MainActivity.TEAMS_OBJECTS, (Serializable) allTeamsData);
         startActivity(intent);
     }
 
