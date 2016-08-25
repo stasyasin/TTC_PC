@@ -53,4 +53,20 @@ public class TeamPointsCounter implements Serializable {
         }
         return parseInt;
     }
+
+    public static List<TeamPointsCounter> sortByPoints(List<TeamPointsCounter> inputListObj) {
+        List<TeamPointsCounter> sortedList = inputListObj;
+        for (int i = 0; i < sortedList.size() - 1; i++) {
+            for (int j = 0; j < sortedList.size() - 1; j++) {
+                Integer teamPointsResult1 = sortedList.get(j).teamPointsResult;
+                Integer teamPointsResult2 = sortedList.get(j + 1).teamPointsResult;
+                if (teamPointsResult2 > teamPointsResult1) {
+                    TeamPointsCounter temp = sortedList.get(j + 1);
+                    sortedList.set(j + 1, sortedList.get(j));
+                    sortedList.set(j, temp);
+                }
+            }
+        }
+        return sortedList;
+    }
 }
