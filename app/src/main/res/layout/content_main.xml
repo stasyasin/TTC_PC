@@ -48,7 +48,7 @@
                     android:maxLength="10"
                     android:maxLines="1"
                     android:nestedScrollingEnabled="false"
-                    android:text="@string/yellow" />
+                    android:text="@string/teamName1" />
 
                 <EditText
                     android:id="@+id/teamName2"
@@ -60,7 +60,7 @@
                     android:maxLength="10"
                     android:maxLines="1"
                     android:nestedScrollingEnabled="false"
-                    android:text="@string/blue" />
+                    android:text="@string/teamName2" />
 
                 <EditText
                     android:id="@+id/teamName3"
@@ -72,7 +72,7 @@
                     android:maxLength="10"
                     android:maxLines="1"
                     android:nestedScrollingEnabled="false"
-                    android:text="@string/black" />
+                    android:text="@string/teamName3" />
 
                 <EditText
                     android:id="@+id/teamName4"
@@ -84,7 +84,7 @@
                     android:maxLength="10"
                     android:maxLines="1"
                     android:nestedScrollingEnabled="false"
-                    android:text="@string/red" />
+                    android:text="@string/teamName4" />
 
                 <EditText
                     android:id="@+id/teamName5"
@@ -96,7 +96,7 @@
                     android:maxLength="10"
                     android:maxLines="1"
                     android:nestedScrollingEnabled="false"
-                    android:text="@string/green" />
+                    android:text="@string/teamName5" />
             </LinearLayout>
 
             <LinearLayout
@@ -532,55 +532,55 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:digits="0123456789-"
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="3"
-                    android:text="@string/zero"
-                    android:digits="0123456789-"/>
+                    android:text="@string/zero" />
 
                 <EditText
                     android:id="@+id/quest2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:digits="0123456789-"
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="3"
-                    android:text="@string/zero"
-                    android:digits="0123456789-"/>
+                    android:text="@string/zero" />
 
                 <EditText
                     android:id="@+id/quest3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:digits="0123456789-"
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="3"
-                    android:text="@string/zero"
-                    android:digits="0123456789-"/>
+                    android:text="@string/zero" />
 
                 <EditText
                     android:id="@+id/quest4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:digits="0123456789-"
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="3"
-                    android:text="@string/zero"
-                    android:digits="0123456789-"/>
+                    android:text="@string/zero" />
 
                 <EditText
                     android:id="@+id/quest5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:digits="0123456789-"
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="3"
-                    android:text="@string/zero"
-                    android:digits="0123456789-"/>
+                    android:text="@string/zero" />
             </LinearLayout>
 
             <LinearLayout
@@ -601,8 +601,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
-                    android:weightSum="5"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:weightSum="5">
 
                     <RadioButton
                         android:id="@+id/radioButton1"
@@ -643,27 +643,23 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="horizontal"
-                android:weightSum="6">
+                android:weightSum="7">
 
-                <ImageView
-                    android:id="@+id/imageEmpty1"
+                <Button
+                    android:id="@+id/refreshPage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:onClick="refreshPage"
+                    android:text="R" />
 
                 <Button
                     android:id="@+id/calculatePoints"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="4"
-                    android:onClick="calculatePoints"
-                    android:text="Calculate Points" />
-
-                <ImageView
-                    android:id="@+id/imageEmpty2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="6"
+                    android:onClick="calculatePoints"
+                    android:text="Calculate Points" />
 
             </LinearLayout>
 
