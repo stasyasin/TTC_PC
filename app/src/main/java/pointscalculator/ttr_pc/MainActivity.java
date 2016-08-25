@@ -154,7 +154,9 @@ public class MainActivity extends AppCompatActivity
         intent.putExtra(GREEN_TEAM_NAME, greenTeam.name);
         intent.putExtra(GREEN_TEAM_RESULTS, greenTeam.teamPointsResult.toString());
 
-        intent.putExtra(MainActivity.TEAMS_OBJECTS, (Serializable) allTeamsData);
+        List<TeamPointsCounter> allTeamsDataSorted = TeamPointsCounter.sortByPoints(allTeamsData);
+
+        intent.putExtra(MainActivity.TEAMS_OBJECTS, (Serializable) allTeamsDataSorted);
 
         startActivity(intent);
     }
