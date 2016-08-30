@@ -18,12 +18,12 @@ public class TeamPointsCounter implements Serializable {
     String quest;
     Boolean longestWay;
     Integer teamPointsResult;
-    Integer coef1 = 1;
-    Integer coef2 = 2;
-    Integer coef3 = 4;
-    Integer coef4 = 7;
-    Integer coef5 = 15;
-    Integer coef6 = 21;
+    static Integer coef1 = 1;
+    static Integer coef2 = 2;
+    static Integer coef3 = 4;
+    static Integer coef4 = 7;
+    static Integer coef5 = 15;
+    static Integer coef6 = 21;
 
     public TeamPointsCounter(List<String> inputData) {
         this.name = inputData.get(0);
