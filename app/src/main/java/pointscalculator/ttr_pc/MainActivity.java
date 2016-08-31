@@ -173,8 +173,9 @@ public class MainActivity extends AppCompatActivity
     private List<String> getInputData(int columnInd) {
         List<String> inputData = new ArrayList<String>();
         EditText editText = (EditText) findViewById(getResources().getIdentifier("teamName" + columnInd, "id", this.getPackageName()));
+        Integer textColor = editText.getCurrentTextColor();
         if (editText.getText().toString().equals("")) {
-            inputData.add("Team" + columnInd);
+            inputData.add("Team" + columnInd);//TODO fix this to default name
         } else {
             inputData.add(editText.getText().toString());
         }
@@ -194,6 +195,7 @@ public class MainActivity extends AppCompatActivity
         } else {
             inputData.add("false");
         }
+        inputData.add(textColor.toString());
         return inputData;
     }
 

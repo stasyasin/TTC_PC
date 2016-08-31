@@ -20,6 +20,7 @@ public class PointsResults extends AppCompatActivity {
         for (int i = 1; i <= allTeamsData.size(); i++) {
             TextView teamName = (TextView) findViewById(getResources().getIdentifier("teamName" + i, "id", this.getPackageName()));
             teamName.setText(allTeamsData.get(i - 1).name);
+            teamName.setTextColor(allTeamsData.get(i - 1).textColor);
             TextView teamResults = (TextView) findViewById(getResources().getIdentifier("teamResult" + i, "id", this.getPackageName()));
             teamResults.setText(allTeamsData.get(i - 1).teamPointsResult.toString());
         }

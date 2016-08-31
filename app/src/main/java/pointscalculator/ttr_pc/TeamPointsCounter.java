@@ -24,6 +24,7 @@ public class TeamPointsCounter implements Serializable {
     static Integer coef4 = 7;
     static Integer coef5 = 15;
     static Integer coef6 = 21;
+    int textColor;
 
     public TeamPointsCounter(List<String> inputData) {
         this.name = inputData.get(0);
@@ -42,6 +43,7 @@ public class TeamPointsCounter implements Serializable {
         if (longestWay) {
             this.teamPointsResult = this.teamPointsResult + 10;
         }
+        this.textColor = Integer.parseInt(inputData.get(10));
     }
 
     private Integer parseToInt(String parseString) {
