@@ -38,15 +38,15 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         mSettings = PreferenceManager.getDefaultSharedPreferences(this);
 
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -173,8 +173,10 @@ public class MainActivity extends AppCompatActivity
     private List<String> getInputData(int columnInd) {
         List<String> inputData = new ArrayList<String>();
         EditText editText = (EditText) findViewById(getResources().getIdentifier("teamName" + columnInd, "id", this.getPackageName()));
+        Integer textColor = editText.getCurrentTextColor();
         if (editText.getText().toString().equals("")) {
-            inputData.add("Team" + columnInd);
+            String renameTeam= getResources().getString(getResources().getIdentifier("teamName" + columnInd, "string", this.getPackageName()));
+            inputData.add(renameTeam);
         } else {
             inputData.add(editText.getText().toString());
         }
@@ -194,6 +196,7 @@ public class MainActivity extends AppCompatActivity
         } else {
             inputData.add("false");
         }
+        inputData.add(textColor.toString());
         return inputData;
     }
 

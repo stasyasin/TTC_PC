@@ -48,7 +48,9 @@
                     android:maxLength="10"
                     android:maxLines="1"
                     android:nestedScrollingEnabled="false"
-                    android:text="@string/teamName1" />
+                    android:gravity="center"
+                    android:text="@string/teamName1"
+                    android:textColor="@color/yellow" />
 
                 <EditText
                     android:id="@+id/teamName2"
@@ -60,7 +62,9 @@
                     android:maxLength="10"
                     android:maxLines="1"
                     android:nestedScrollingEnabled="false"
-                    android:text="@string/teamName2" />
+                    android:gravity="center"
+                    android:text="@string/teamName2"
+                    android:textColor="@color/blue" />
 
                 <EditText
                     android:id="@+id/teamName3"
@@ -72,7 +76,9 @@
                     android:maxLength="10"
                     android:maxLines="1"
                     android:nestedScrollingEnabled="false"
-                    android:text="@string/teamName3" />
+                    android:gravity="center"
+                    android:text="@string/teamName3"
+                    android:textColor="@color/black" />
 
                 <EditText
                     android:id="@+id/teamName4"
@@ -84,7 +90,9 @@
                     android:maxLength="10"
                     android:maxLines="1"
                     android:nestedScrollingEnabled="false"
-                    android:text="@string/teamName4" />
+                    android:gravity="center"
+                    android:text="@string/teamName4"
+                    android:textColor="@color/red" />
 
                 <EditText
                     android:id="@+id/teamName5"
@@ -96,7 +104,9 @@
                     android:maxLength="10"
                     android:maxLines="1"
                     android:nestedScrollingEnabled="false"
-                    android:text="@string/teamName5" />
+                    android:gravity="center"
+                    android:text="@string/teamName5"
+                    android:textColor="@color/green" />
             </LinearLayout>
 
             <LinearLayout
@@ -571,7 +581,8 @@
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="3"
-                    android:text="@string/zero" />
+                    android:hint="0"
+                    android:gravity="center" />
 
                 <EditText
                     android:id="@+id/quest2"
@@ -582,7 +593,8 @@
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="3"
-                    android:text="@string/zero" />
+                    android:hint="0"
+                    android:gravity="center" />
 
                 <EditText
                     android:id="@+id/quest3"
@@ -593,7 +605,8 @@
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="3"
-                    android:text="@string/zero" />
+                    android:hint="0"
+                    android:gravity="center" />
 
                 <EditText
                     android:id="@+id/quest4"
@@ -604,7 +617,8 @@
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="3"
-                    android:text="@string/zero" />
+                    android:hint="0"
+                    android:gravity="center" />
 
                 <EditText
                     android:id="@+id/quest5"
@@ -615,7 +629,8 @@
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="3"
-                    android:text="@string/zero" />
+                    android:hint="0"
+                    android:gravity="center" />
             </LinearLayout>
 
             <LinearLayout
@@ -675,7 +690,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:orientation="horizontal"
                 android:weightSum="7">
@@ -683,15 +698,15 @@
                 <Button
                     android:id="@+id/refreshPage"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="refreshPage"
-                    android:text="R" />
+                    android:background="@drawable/refresh_button"
+                    android:onClick="refreshPage" />
 
                 <Button
                     android:id="@+id/calculatePoints"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="6"
                     android:onClick="calculatePoints"
                     android:text="Calculate Points" />
