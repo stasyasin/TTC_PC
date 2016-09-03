@@ -175,7 +175,8 @@ public class MainActivity extends AppCompatActivity
         EditText editText = (EditText) findViewById(getResources().getIdentifier("teamName" + columnInd, "id", this.getPackageName()));
         Integer textColor = editText.getCurrentTextColor();
         if (editText.getText().toString().equals("")) {
-            inputData.add("Team" + columnInd);//TODO fix this to default name
+            String renameTeam= getResources().getString(getResources().getIdentifier("teamName" + columnInd, "string", this.getPackageName()));
+            inputData.add(renameTeam);
         } else {
             inputData.add(editText.getText().toString());
         }
