@@ -120,6 +120,7 @@
                     android:id="@+id/imageTrain1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/carriage_1"
                     android:layout_weight="1" />
 
                 <Button
@@ -185,6 +186,7 @@
                     android:id="@+id/imageTrain2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/carriage_2"
                     android:layout_weight="1" />
 
                 <Button
@@ -249,6 +251,7 @@
                     android:id="@+id/imageTrain3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/carriage_3"
                     android:layout_weight="1" />
 
                 <Button
@@ -313,6 +316,7 @@
                     android:id="@+id/imageTrain4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/carriage_4"
                     android:layout_weight="1" />
 
                 <Button
@@ -377,6 +381,7 @@
                     android:id="@+id/imageTrain5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/carriage_6"
                     android:layout_weight="1" />
 
                 <Button
@@ -441,6 +446,7 @@
                     android:id="@+id/imageTrain6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/carriage_8"
                     android:layout_weight="1" />
 
                 <Button
@@ -506,6 +512,7 @@
                     android:id="@+id/imageStation"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/carriage_station"
                     android:layout_weight="1" />
 
                 <Button
@@ -570,6 +577,7 @@
                     android:id="@+id/imageQuest"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/carriage_quests"
                     android:layout_weight="1" />
 
                 <EditText
@@ -644,6 +652,7 @@
                     android:id="@+id/imageLongestWay"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/carriage_longest_way"
                     android:layout_weight="1" />
 
                 <RadioGroup
@@ -657,32 +666,38 @@
                     <RadioButton
                         android:id="@+id/radioButton1"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:allowUndo="true" />
 
                     <RadioButton
                         android:id="@+id/radioButton2"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:allowUndo="true" />
 
                     <RadioButton
                         android:id="@+id/radioButton3"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:allowUndo="true" />
 
                     <RadioButton
                         android:id="@+id/radioButton4"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:allowUndo="true" />
 
                     <RadioButton
                         android:id="@+id/radioButton5"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:allowUndo="true"
+                        android:focusableInTouchMode="false" />
                 </RadioGroup>
 
 
@@ -700,7 +715,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/refresh_button"
+                    android:text="R"
                     android:onClick="refreshPage" />
 
                 <Button
