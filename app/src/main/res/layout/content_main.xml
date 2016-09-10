@@ -44,11 +44,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
+                    android:gravity="center"
                     android:inputType="textPersonName"
                     android:maxLength="10"
                     android:maxLines="1"
                     android:nestedScrollingEnabled="false"
-                    android:gravity="center"
                     android:text="@string/teamName1"
                     android:textColor="@color/yellow" />
 
@@ -58,11 +58,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
+                    android:gravity="center"
                     android:inputType="textPersonName"
                     android:maxLength="10"
                     android:maxLines="1"
                     android:nestedScrollingEnabled="false"
-                    android:gravity="center"
                     android:text="@string/teamName2"
                     android:textColor="@color/blue" />
 
@@ -72,11 +72,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
+                    android:gravity="center"
                     android:inputType="textPersonName"
                     android:maxLength="10"
                     android:maxLines="1"
                     android:nestedScrollingEnabled="false"
-                    android:gravity="center"
                     android:text="@string/teamName3"
                     android:textColor="@color/black" />
 
@@ -86,11 +86,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
+                    android:gravity="center"
                     android:inputType="textPersonName"
                     android:maxLength="10"
                     android:maxLines="1"
                     android:nestedScrollingEnabled="false"
-                    android:gravity="center"
                     android:text="@string/teamName4"
                     android:textColor="@color/red" />
 
@@ -100,11 +100,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
+                    android:gravity="center"
                     android:inputType="textPersonName"
                     android:maxLength="10"
                     android:maxLines="1"
                     android:nestedScrollingEnabled="false"
-                    android:gravity="center"
                     android:text="@string/teamName5"
                     android:textColor="@color/green" />
             </LinearLayout>
@@ -120,8 +120,8 @@
                     android:id="@+id/imageTrain1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/carriage_1"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:background="@drawable/carriage_1" />
 
                 <Button
                     android:id="@+id/button11"
@@ -186,8 +186,8 @@
                     android:id="@+id/imageTrain2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/carriage_2"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:background="@drawable/carriage_2" />
 
                 <Button
                     android:id="@+id/button12"
@@ -251,8 +251,8 @@
                     android:id="@+id/imageTrain3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/carriage_3"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:background="@drawable/carriage_3" />
 
                 <Button
                     android:id="@+id/button13"
@@ -316,8 +316,8 @@
                     android:id="@+id/imageTrain4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/carriage_4"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:background="@drawable/carriage_4" />
 
                 <Button
                     android:id="@+id/button14"
@@ -381,8 +381,8 @@
                     android:id="@+id/imageTrain5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/carriage_6"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:background="@drawable/carriage_6" />
 
                 <Button
                     android:id="@+id/button15"
@@ -446,8 +446,8 @@
                     android:id="@+id/imageTrain6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/carriage_8"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:background="@drawable/carriage_8" />
 
                 <Button
                     android:id="@+id/button16"
@@ -512,8 +512,8 @@
                     android:id="@+id/imageStation"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/carriage_station"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:background="@drawable/carriage_station" />
 
                 <Button
                     android:id="@+id/button17"
@@ -577,8 +577,8 @@
                     android:id="@+id/imageQuest"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/carriage_quests"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:background="@drawable/carriage_quests" />
 
                 <EditText
                     android:id="@+id/quest1"
@@ -587,10 +587,10 @@
                     android:layout_weight="1"
                     android:digits="0123456789-"
                     android:ems="10"
-                    android:inputType="number"
-                    android:maxLength="3"
+                    android:gravity="center"
                     android:hint="0"
-                    android:gravity="center" />
+                    android:inputType="number"
+                    android:maxLength="3" />
 
                 <EditText
                     android:id="@+id/quest2"
@@ -599,10 +599,10 @@
                     android:layout_weight="1"
                     android:digits="0123456789-"
                     android:ems="10"
-                    android:inputType="number"
-                    android:maxLength="3"
+                    android:gravity="center"
                     android:hint="0"
-                    android:gravity="center" />
+                    android:inputType="number"
+                    android:maxLength="3" />
 
                 <EditText
                     android:id="@+id/quest3"
@@ -611,10 +611,10 @@
                     android:layout_weight="1"
                     android:digits="0123456789-"
                     android:ems="10"
-                    android:inputType="number"
-                    android:maxLength="3"
+                    android:gravity="center"
                     android:hint="0"
-                    android:gravity="center" />
+                    android:inputType="number"
+                    android:maxLength="3" />
 
                 <EditText
                     android:id="@+id/quest4"
@@ -623,10 +623,10 @@
                     android:layout_weight="1"
                     android:digits="0123456789-"
                     android:ems="10"
-                    android:inputType="number"
-                    android:maxLength="3"
+                    android:gravity="center"
                     android:hint="0"
-                    android:gravity="center" />
+                    android:inputType="number"
+                    android:maxLength="3" />
 
                 <EditText
                     android:id="@+id/quest5"
@@ -635,10 +635,10 @@
                     android:layout_weight="1"
                     android:digits="0123456789-"
                     android:ems="10"
-                    android:inputType="number"
-                    android:maxLength="3"
+                    android:gravity="center"
                     android:hint="0"
-                    android:gravity="center" />
+                    android:inputType="number"
+                    android:maxLength="3" />
             </LinearLayout>
 
             <LinearLayout
@@ -652,8 +652,8 @@
                     android:id="@+id/imageLongestWay"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/carriage_longest_way"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:background="@drawable/carriage_longest_way" />
 
                 <RadioGroup
                     android:id="@+id/RadioGroup"
@@ -668,36 +668,41 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:allowUndo="true" />
+                        android:button="@android:color/transparent"
+                        android:drawableTop="@drawable/custom_radio_button" />
 
                     <RadioButton
                         android:id="@+id/radioButton2"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:allowUndo="true" />
+                        android:button="@android:color/transparent"
+                        android:drawableTop="@drawable/custom_radio_button" />
 
                     <RadioButton
                         android:id="@+id/radioButton3"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:allowUndo="true" />
+                        android:button="@android:color/transparent"
+                        android:drawableTop="@drawable/custom_radio_button" />
 
                     <RadioButton
                         android:id="@+id/radioButton4"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:allowUndo="true" />
+                        android:button="@android:color/transparent"
+                        android:drawableTop="@drawable/custom_radio_button" />
 
                     <RadioButton
                         android:id="@+id/radioButton5"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:allowUndo="true"
-                        android:focusableInTouchMode="false" />
+                        android:button="@android:color/transparent"
+                        android:drawableTop="@drawable/custom_radio_button" />
+
                 </RadioGroup>
 
 
@@ -715,8 +720,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="R"
-                    android:onClick="refreshPage" />
+                    android:onClick="refreshPage"
+                    android:text="R" />
 
                 <Button
                     android:id="@+id/calculatePoints"
