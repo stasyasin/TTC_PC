@@ -209,7 +209,7 @@ public class MainActivity extends AppCompatActivity
                 button.setText("0");
             }
             editText = (EditText) findViewById(getResources().getIdentifier("quest" + i, "id", this.getPackageName()));
-            editText.setText("0");
+            editText.setText("");
             RadioButton radioButton = (RadioButton) findViewById(getResources().getIdentifier("radioButton" + i, "id", this.getPackageName()));
             radioButton.setChecked(false);
         }

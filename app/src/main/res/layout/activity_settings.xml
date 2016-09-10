@@ -21,28 +21,15 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:orientation="vertical"
-            android:weightSum="7">
+            android:weightSum="11">
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:orientation="horizontal"
-                android:weightSum="5" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:orientation="horizontal"
                 android:weightSum="6">
-
-                <ImageView
-                    android:id="@+id/imageTitle1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -56,24 +43,6 @@
                     android:layout_weight="1"
                     android:inputType="number"
                     android:text="Points" />
-
-                <ImageView
-                    android:id="@+id/emptyTitle1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <ImageView
-                    android:id="@+id/emptyTitle2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <ImageView
-                    android:id="@+id/emptyTitle3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
             </LinearLayout>
 
             <LinearLayout
@@ -87,19 +56,8 @@
                     android:id="@+id/imageTrain1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <EditText
-                    android:id="@+id/trainLength1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:maxLength="10"
-                    android:maxLines="1"
-                    android:nestedScrollingEnabled="false"
-                    android:text="@string/teamName5" />
+                    android:background="@drawable/carriage_1" />
 
                 <EditText
                     android:id="@+id/trainPoints1"
@@ -114,24 +72,6 @@
                     android:nestedScrollingEnabled="false"
                     android:text="@string/zero" />
 
-                <ImageView
-                    android:id="@+id/emptyTrain11"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <ImageView
-                    android:id="@+id/emptyTrain12"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <ImageView
-                    android:id="@+id/emptyTrain13"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -145,19 +85,8 @@
                     android:id="@+id/imageTrain2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <EditText
-                    android:id="@+id/trainLength2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:maxLength="10"
-                    android:maxLines="1"
-                    android:nestedScrollingEnabled="false"
-                    android:text="@string/teamName5" />
+                    android:background="@drawable/carriage_2" />
 
                 <EditText
                     android:id="@+id/trainPoints2"
@@ -172,24 +101,6 @@
                     android:nestedScrollingEnabled="false"
                     android:text="@string/zero" />
 
-                <ImageView
-                    android:id="@+id/emptyTrain21"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <ImageView
-                    android:id="@+id/emptyTrain22"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <ImageView
-                    android:id="@+id/emptyTrain23"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -203,19 +114,8 @@
                     android:id="@+id/imageTrain3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <EditText
-                    android:id="@+id/trainLength3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:maxLength="10"
-                    android:maxLines="1"
-                    android:nestedScrollingEnabled="false"
-                    android:text="@string/teamName5" />
+                    android:background="@drawable/carriage_3" />
 
                 <EditText
                     android:id="@+id/trainPoints3"
@@ -230,24 +130,6 @@
                     android:nestedScrollingEnabled="false"
                     android:text="@string/zero" />
 
-                <ImageView
-                    android:id="@+id/emptyTrain31"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <ImageView
-                    android:id="@+id/emptyTrain32"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <ImageView
-                    android:id="@+id/emptyTrain33"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -261,19 +143,8 @@
                     android:id="@+id/imageTrain4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <EditText
-                    android:id="@+id/trainLength4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:maxLength="10"
-                    android:maxLines="1"
-                    android:nestedScrollingEnabled="false"
-                    android:text="@string/teamName5" />
+                    android:background="@drawable/carriage_4" />
 
                 <EditText
                     android:id="@+id/trainPoints4"
@@ -288,24 +159,6 @@
                     android:nestedScrollingEnabled="false"
                     android:text="@string/zero" />
 
-                <ImageView
-                    android:id="@+id/emptyTrain41"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <ImageView
-                    android:id="@+id/emptyTrain42"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <ImageView
-                    android:id="@+id/emptyTrain43"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -319,19 +172,8 @@
                     android:id="@+id/imageTrain5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <EditText
-                    android:id="@+id/trainLength5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:maxLength="10"
-                    android:maxLines="1"
-                    android:nestedScrollingEnabled="false"
-                    android:text="@string/teamName5" />
+                    android:background="@drawable/carriage_6" />
 
                 <EditText
                     android:id="@+id/trainPoints5"
@@ -346,23 +188,6 @@
                     android:nestedScrollingEnabled="false"
                     android:text="@string/zero" />
 
-                <ImageView
-                    android:id="@+id/emptyTrain51"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <ImageView
-                    android:id="@+id/emptyTrain52"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <ImageView
-                    android:id="@+id/emptyTrain53"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
 
             </LinearLayout>
 
@@ -377,19 +202,8 @@
                     android:id="@+id/imageTrain6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <EditText
-                    android:id="@+id/trainLength6"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:maxLength="10"
-                    android:maxLines="1"
-                    android:nestedScrollingEnabled="false"
-                    android:text="@string/teamName5" />
+                    android:background="@drawable/carriage_8" />
 
                 <EditText
                     android:id="@+id/trainPoints6"
@@ -404,23 +218,6 @@
                     android:nestedScrollingEnabled="false"
                     android:text="@string/zero" />
 
-                <ImageView
-                    android:id="@+id/emptyTrain61"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <ImageView
-                    android:id="@+id/emptyTrain62"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <ImageView
-                    android:id="@+id/emptyTrain63"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
             </LinearLayout>
 
             <LinearLayout
@@ -459,6 +256,30 @@
                     android:text="Save" />
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/Support"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="@string/support_message" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="4"
+                android:orientation="horizontal"
+                android:weightSum="5" />
+
         </LinearLayout>
 
     </ScrollView>
