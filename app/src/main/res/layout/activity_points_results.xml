@@ -16,29 +16,14 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:orientation="vertical"
-        android:weightSum="9">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:orientation="horizontal"
-            android:weightSum="5" />
+        android:weightSum="10">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:weightSum="4">
-
-            <TextView
-                android:id="@+id/emptyTeam1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="" />
+            android:weightSum="6">
 
             <TextView
                 android:id="@+id/teamName1"
@@ -56,13 +41,6 @@
                 android:gravity="left"
                 android:text="@string/empty" />
 
-            <TextView
-                android:id="@+id/empty2Team1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="" />
         </LinearLayout>
 
         <LinearLayout
@@ -70,16 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:weightSum="4">
-
-
-            <TextView
-                android:id="@+id/emptyTeam2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="" />
+            android:weightSum="6">
 
             <TextView
                 android:id="@+id/teamName2"
@@ -96,14 +65,6 @@
                 android:layout_weight="1"
                 android:gravity="left"
                 android:text="@string/empty" />
-
-            <TextView
-                android:id="@+id/empty2Team2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="" />
         </LinearLayout>
 
         <LinearLayout
@@ -111,16 +72,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:weightSum="4">
+            android:weightSum="6">
 
-
-            <TextView
-                android:id="@+id/emptyTeam3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="" />
 
             <TextView
                 android:id="@+id/teamName3"
@@ -138,13 +91,6 @@
                 android:gravity="left"
                 android:text="@string/empty" />
 
-            <TextView
-                android:id="@+id/empty2Team3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="" />
         </LinearLayout>
 
         <LinearLayout
@@ -152,16 +98,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:weightSum="4">
-
-
-            <TextView
-                android:id="@+id/emptyTeam4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="" />
+            android:weightSum="6">
 
             <TextView
                 android:id="@+id/teamName4"
@@ -178,14 +115,6 @@
                 android:layout_weight="1"
                 android:gravity="left"
                 android:text="@string/empty" />
-
-            <TextView
-                android:id="@+id/empty2Team4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="" />
         </LinearLayout>
 
         <LinearLayout
@@ -193,16 +122,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:weightSum="4">
-
-
-            <TextView
-                android:id="@+id/emptyTeam5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="" />
+            android:weightSum="6">
 
             <TextView
                 android:id="@+id/teamName5"
@@ -220,19 +140,28 @@
                 android:gravity="left"
                 android:text="@string/empty" />
 
-            <TextView
-                android:id="@+id/empty2Team5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/Support"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="@string/support_message" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
             android:orientation="horizontal"
             android:weightSum="5" />
     </LinearLayout>
