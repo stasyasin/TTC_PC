@@ -20,6 +20,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
+import com.google.android.gms.ads.*;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -175,7 +177,7 @@ public class MainActivity extends AppCompatActivity
         EditText editText = (EditText) findViewById(getResources().getIdentifier("teamName" + columnInd, "id", this.getPackageName()));
         Integer textColor = editText.getCurrentTextColor();
         if (editText.getText().toString().equals("")) {
-            String renameTeam= getResources().getString(getResources().getIdentifier("teamName" + columnInd, "string", this.getPackageName()));
+            String renameTeam = getResources().getString(getResources().getIdentifier("teamName" + columnInd, "string", this.getPackageName()));
             inputData.add(renameTeam);
         } else {
             inputData.add(editText.getText().toString());
