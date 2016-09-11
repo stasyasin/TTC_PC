@@ -7,7 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import com.google.android.gms.ads.*;
+
 public class SettingsActivity extends AppCompatActivity {
+    private AdView adView;
     public static final String APP_PREFERENCES = "mysettings";
     public static final String APP_PREFERENCES_COEF1 = "coef1";
     private SharedPreferences mSettings;
@@ -16,6 +19,13 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+//        mAdView.setAdSize(AdSize.SMART_BANNER);//Размер баннера
+        AdRequest adRequest = new AdRequest.Builder().build();//todo for production
+//        AdRequest adRequest = new com.google.android.gms.ads.AdRequest.Builder()
+//                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+//                .addTestDevice("A2FAD940C1B8A8B03605604D735E629E").build();// testmode
+        mAdView.loadAd(adRequest);
         mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
         EditText teamResults;
         teamResults = (EditText) findViewById(R.id.trainPoints1);
