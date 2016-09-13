@@ -4,10 +4,10 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="yellow">#FFD800</color>
-    <color name="blue">#0000FF</color>
-    <color name="black">#000000</color>
+    <color name="blue">#6666FF</color>
+    <color name="black">#101010</color>
+    <color name="red">#FF3333</color>
+    <color name="green">#009900</color>
     <color name="border_black">#000000</color>
     <color name="rectangle_background">#FFFFFF</color>
-    <color name="red">#FF0000</color>
-    <color name="green">#00FF00</color>
 </resources>
