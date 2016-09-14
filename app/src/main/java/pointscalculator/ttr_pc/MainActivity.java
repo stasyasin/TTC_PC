@@ -16,6 +16,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.AnimationSet;
+import android.view.animation.DecelerateInterpolator;
+import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -216,6 +219,19 @@ public class MainActivity extends AppCompatActivity
             RadioButton radioButton = (RadioButton) findViewById(getResources().getIdentifier("radioButton" + i, "id", this.getPackageName()));
             radioButton.setChecked(false);
         }
+
+        Button button = (Button)findViewById(R.id.refreshPage);
+        AnimationSet animSet = new AnimationSet(true);
+        animSet.setInterpolator(new DecelerateInterpolator());
+        animSet.setFillAfter(true);
+        animSet.setFillEnabled(true);
+        final RotateAnimation animRotate = new RotateAnimation(0.0f, -180.0f,
+                RotateAnimation.RELATIVE_TO_SELF, 0.5f,
+                RotateAnimation.RELATIVE_TO_SELF, 0.5f);
+        animRotate.setDuration(1500);
+        animRotate.setFillAfter(true);
+        animSet.addAnimation(animRotate);
+        button.startAnimation(animSet);
 
     }
 }
