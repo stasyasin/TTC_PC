@@ -2,6 +2,9 @@ package pointscalculator.ttr_pc;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
@@ -98,9 +101,18 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_share) {
             // Handle the camera action
 
-        }else if (id == R.id.information) {
+        } else if (id == R.id.information) {
             Intent intent = new Intent(this, Information.class);
             startActivity(intent);
+        } else if (id == R.id.rate) {
+            Intent intent = new Intent();
+            intent.setAction(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("market://search?q=foo"));
+            PackageManager pm = getPackageManager();
+            List<ResolveInfo> list = pm.queryIntentActivities(intent, 0);
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse("market://details?id=" + getPackageName()));
+            startActivity(i);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

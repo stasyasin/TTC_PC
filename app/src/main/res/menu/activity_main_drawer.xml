@@ -5,13 +5,18 @@
     <item android:title="Communicate">
         <menu>
             <item
+                android:id="@+id/information"
+                android:icon="@drawable/ic_menu_send"
+                android:title="About" />
+            <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Share" />
             <item
-                android:id="@+id/information"
+                android:id="@+id/rate"
                 android:icon="@drawable/ic_menu_send"
-                android:title="About" />
+                android:title="Rate this app" />
+
         </menu>
     </item>
 
