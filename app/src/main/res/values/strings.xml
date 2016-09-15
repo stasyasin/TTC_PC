@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TTR_PC</string>
+    <string name="app_name">Tickets to Ride Calculator</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -17,4 +17,18 @@
     <string name="banner_ad_unit_id1">ca-app-pub-8781425797517197/5678816268</string>
     <string name="banner_ad_unit_id2">ca-app-pub-8781425797517197/5243007464</string>
     <string name="banner_ad_unit_id3">ca-app-pub-8781425797517197/6719740663</string>
+    <string name="information_text100">Note: This application was made for fun/study purpose.</string>
+    <string name="information_text1">Having fun with Tickets to Ride? But boring to calculate points in the end??? This
+        application will help you to have ultimate fun of the game!
+    </string>
+    <string name="information_text2">How to use:</string>
+    <string name="information_text3">Pick names of your teams, select number of ways with different lengths, quests
+        points, number of stations and team with longest way.
+    </string>
+    <string name="information_text4">Click on "Calculate points" button to see your results.</string>
+    <string name="information_text5">Share results with your friends.</string>
+    <string name="information_text6">You can use Refresh button to clean main page.</string>
+    <string name="information_text7">You can use Settings page to configure points amount for different way lengths.
+    </string>
+    <string name="information_text8">Enjoy your game!</string>
 </resources>
