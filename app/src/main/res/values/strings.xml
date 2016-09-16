@@ -11,24 +11,25 @@
     <string name="teamName4">Red</string>
     <string name="teamName5">Green</string>
     <string name="zero">0</string>
-    <string name="empty">-----</string>
+    <string name="empty">   </string>
     <string name="support_message">Thanks for using this app.</string>
     <string name="admob_publisher_id">pub-8781425797517197</string>
     <string name="banner_ad_unit_id1">ca-app-pub-8781425797517197/5678816268</string>
     <string name="banner_ad_unit_id2">ca-app-pub-8781425797517197/5243007464</string>
     <string name="banner_ad_unit_id3">ca-app-pub-8781425797517197/6719740663</string>
-    <string name="information_text100">Note: This application was made for fun/study purpose.</string>
-    <string name="information_text1">Having fun with Tickets to Ride? But boring to calculate points in the end??? This
-        application will help you to have ultimate fun of the game!
-    </string>
+    <string name="information_text1a">Having fun with Tickets to Ride? But boring to calculate points in the end???</string>
+    <string name="information_text1b">This application will help you to have ultimate fun of the game!</string>
     <string name="information_text2">How to use:</string>
-    <string name="information_text3">Pick names of your teams, select number of ways with different lengths, quests
-        points, number of stations and team with longest way.
-    </string>
-    <string name="information_text4">Click on "Calculate points" button to see your results.</string>
-    <string name="information_text5">Share results with your friends.</string>
+    <string name="information_text3a">- Pick names of your teams</string>
+    <string name="information_text3b">- Select(Tap) number of ways with different lengths</string>
+    <string name="information_text3c">- Populate quests points</string>
+    <string name="information_text3d">- Select(Tap) number of stations</string>
+    <string name="information_text3e">- Chose team with longest way</string>
+    <string name="information_text3f">- Click on "Calculate points" button to see your results.</string>
+    <string name="information_text3g">- Share results with your friends!</string>
     <string name="information_text6">You can use Refresh button to clean main page.</string>
     <string name="information_text7">You can use Settings page to configure points amount for different way lengths.
     </string>
     <string name="information_text8">Enjoy your game!</string>
+    <string name="information_text9">Note: This application was made for fun/study purpose.</string>
 </resources>
