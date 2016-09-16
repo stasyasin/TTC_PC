@@ -8,10 +8,10 @@
                 android:id="@+id/information"
                 android:icon="@drawable/ic_information"
                 android:title="About" />
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="Share" />-->//TODO implement later after first release
             <item
                 android:id="@+id/rate"
                 android:icon="@drawable/ic_thumb_up"

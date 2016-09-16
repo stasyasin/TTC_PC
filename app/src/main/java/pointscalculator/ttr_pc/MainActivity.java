@@ -101,10 +101,7 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_share) {
-            // Handle the camera action
-
-        } else if (id == R.id.information) {
+        if (id == R.id.information) {
             Intent intent = new Intent(this, Information.class);
             startActivity(intent);
         } else if (id == R.id.rate) {
@@ -117,6 +114,10 @@ public class MainActivity extends AppCompatActivity
             i.setData(Uri.parse("market://details?id=" + getPackageName()));
             startActivity(i);
         }
+//        else (id == R.id.nav_share) {
+//            // Handle the camera action
+//
+//        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
