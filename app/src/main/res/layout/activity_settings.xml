@@ -17,10 +17,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:weightSum="11">
 
@@ -33,11 +30,11 @@
                 android:weightSum="6">
 
                 <TextView
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:text="Length" />
 
                 <TextView
@@ -60,7 +57,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/carriage_1" />
+                    android:background="@drawable/carriage_1"
+                    android:contentDescription="@string/carriage_image" />
 
                 <EditText
                     android:id="@+id/trainPoints1"
@@ -72,7 +70,6 @@
                     android:inputType="number"
                     android:maxLength="2"
                     android:maxLines="1"
-                    android:nestedScrollingEnabled="false"
                     android:text="@string/zero" />
 
             </LinearLayout>
@@ -89,7 +86,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/carriage_2" />
+                    android:background="@drawable/carriage_2"
+                    android:contentDescription="@string/carriage_image" />
 
                 <EditText
                     android:id="@+id/trainPoints2"
@@ -101,7 +99,6 @@
                     android:inputType="number"
                     android:maxLength="2"
                     android:maxLines="1"
-                    android:nestedScrollingEnabled="false"
                     android:text="@string/zero" />
 
             </LinearLayout>
@@ -118,7 +115,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/carriage_3" />
+                    android:background="@drawable/carriage_3"
+                    android:contentDescription="@string/carriage_image" />
 
                 <EditText
                     android:id="@+id/trainPoints3"
@@ -130,7 +128,6 @@
                     android:inputType="number"
                     android:maxLength="2"
                     android:maxLines="1"
-                    android:nestedScrollingEnabled="false"
                     android:text="@string/zero" />
 
             </LinearLayout>
@@ -147,7 +144,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/carriage_4" />
+                    android:background="@drawable/carriage_4"
+                    android:contentDescription="@string/carriage_image" />
 
                 <EditText
                     android:id="@+id/trainPoints4"
@@ -159,7 +157,6 @@
                     android:inputType="number"
                     android:maxLength="2"
                     android:maxLines="1"
-                    android:nestedScrollingEnabled="false"
                     android:text="@string/zero" />
 
             </LinearLayout>
@@ -176,7 +173,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/carriage_6" />
+                    android:background="@drawable/carriage_6"
+                    android:contentDescription="@string/carriage_image" />
 
                 <EditText
                     android:id="@+id/trainPoints5"
@@ -188,7 +186,6 @@
                     android:inputType="number"
                     android:maxLength="2"
                     android:maxLines="1"
-                    android:nestedScrollingEnabled="false"
                     android:text="@string/zero" />
 
 
@@ -206,7 +203,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/carriage_8" />
+                    android:background="@drawable/carriage_8"
+                    android:contentDescription="@string/carriage_image" />
 
                 <EditText
                     android:id="@+id/trainPoints6"
@@ -218,7 +216,6 @@
                     android:inputType="number"
                     android:maxLength="2"
                     android:maxLines="1"
-                    android:nestedScrollingEnabled="false"
                     android:text="@string/zero" />
 
             </LinearLayout>
@@ -238,13 +235,13 @@
                     android:onClick="defaultSettings"
                     android:text="Default" />
 
-                <ImageView
+                <TextView
                     android:id="@+id/empty1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
 
-                <ImageView
+                <TextView
                     android:id="@+id/empty2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"

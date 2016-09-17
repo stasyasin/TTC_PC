@@ -32,4 +32,7 @@
     </string>
     <string name="information_text8">Enjoy your game!</string>
     <string name="information_text9">Note: This application was made for fun/study purpose.</string>
+    <string name="menu_settings_image">Settings</string>
+    <string name="refresh_button_image">refresh_button_image</string>
+    <string name="carriage_image">carriage_length</string>
 </resources>
