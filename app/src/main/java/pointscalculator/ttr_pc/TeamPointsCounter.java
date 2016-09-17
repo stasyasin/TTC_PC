@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * Created by Stasyan on 8/19/2016.
+ * Created by Stasyan on 8/19/2016. This class contain structure of Team, and methods to sort them.
  */
 public class TeamPointsCounter implements Serializable {
     String name;
@@ -47,7 +47,7 @@ public class TeamPointsCounter implements Serializable {
     }
 
     private Integer parseToInt(String parseString) {
-        Integer parseInt = 0;
+        Integer parseInt;
         try {
             parseInt = Integer.parseInt(parseString);
         } catch (Exception e) {
@@ -57,18 +57,17 @@ public class TeamPointsCounter implements Serializable {
     }
 
     public static List<TeamPointsCounter> sortByPoints(List<TeamPointsCounter> inputListObj) {
-        List<TeamPointsCounter> sortedList = inputListObj;
-        for (int i = 0; i < sortedList.size() - 1; i++) {
-            for (int j = 0; j < sortedList.size() - 1; j++) {
-                Integer teamPointsResult1 = sortedList.get(j).teamPointsResult;
-                Integer teamPointsResult2 = sortedList.get(j + 1).teamPointsResult;
+        for (int i = 0; i < inputListObj.size() - 1; i++) {
+            for (int j = 0; j < inputListObj.size() - 1; j++) {
+                Integer teamPointsResult1 = inputListObj.get(j).teamPointsResult;
+                Integer teamPointsResult2 = inputListObj.get(j + 1).teamPointsResult;
                 if (teamPointsResult2 > teamPointsResult1) {
-                    TeamPointsCounter temp = sortedList.get(j + 1);
-                    sortedList.set(j + 1, sortedList.get(j));
-                    sortedList.set(j, temp);
+                    TeamPointsCounter temp = inputListObj.get(j + 1);
+                    inputListObj.set(j + 1, inputListObj.get(j));
+                    inputListObj.set(j, temp);
                 }
             }
         }
-        return sortedList;
+        return inputListObj;
     }
 }

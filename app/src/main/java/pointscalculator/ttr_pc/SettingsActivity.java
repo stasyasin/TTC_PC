@@ -1,7 +1,5 @@
 package pointscalculator.ttr_pc;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,9 +8,6 @@ import android.widget.EditText;
 import com.google.android.gms.ads.*;
 
 public class SettingsActivity extends AppCompatActivity {
-    public static final String APP_PREFERENCES = "mysettings";
-    public static final String APP_PREFERENCES_COEF1 = "coef1";
-    private SharedPreferences mSettings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,26 +15,25 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();//todo Prod
+        AdRequest adRequest = new AdRequest.Builder().build();
 //        AdRequest adRequest = new com.google.android.gms.ads.AdRequest.Builder()
 //                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-//                .addTestDevice("A2FAD940C1B8A8B03605604D735E629E").build();// testmode
+//                .addTestDevice("A2FAD940C1B8A8B03605604D735E629E").build();// testMode
         mAdView.loadAd(adRequest);
 
-        mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
         EditText teamResults;
         teamResults = (EditText) findViewById(R.id.trainPoints1);
-        teamResults.setText(TeamPointsCounter.coef1.toString());
+        teamResults.setText(String.valueOf(TeamPointsCounter.coef1));
         teamResults = (EditText) findViewById(R.id.trainPoints2);
-        teamResults.setText(TeamPointsCounter.coef2.toString());
+        teamResults.setText(String.valueOf(TeamPointsCounter.coef2));
         teamResults = (EditText) findViewById(R.id.trainPoints3);
-        teamResults.setText(TeamPointsCounter.coef3.toString());
+        teamResults.setText(String.valueOf(TeamPointsCounter.coef3));
         teamResults = (EditText) findViewById(R.id.trainPoints4);
-        teamResults.setText(TeamPointsCounter.coef4.toString());
+        teamResults.setText(String.valueOf(TeamPointsCounter.coef4));
         teamResults = (EditText) findViewById(R.id.trainPoints5);
-        teamResults.setText(TeamPointsCounter.coef5.toString());
+        teamResults.setText(String.valueOf(TeamPointsCounter.coef5));
         teamResults = (EditText) findViewById(R.id.trainPoints6);
-        teamResults.setText(TeamPointsCounter.coef6.toString());
+        teamResults.setText(String.valueOf(TeamPointsCounter.coef6));
     }
 
     public void saveSettings(View view) {
@@ -67,16 +61,16 @@ public class SettingsActivity extends AppCompatActivity {
         TeamPointsCounter.coef5 = 15;
         TeamPointsCounter.coef6 = 21;
         editText = (EditText) findViewById(R.id.trainPoints1);
-        editText.setText(TeamPointsCounter.coef1.toString());
+        editText.setText(String.valueOf(TeamPointsCounter.coef1));
         editText = (EditText) findViewById(R.id.trainPoints2);
-        editText.setText(TeamPointsCounter.coef2.toString());
+        editText.setText(String.valueOf(TeamPointsCounter.coef2));
         editText = (EditText) findViewById(R.id.trainPoints3);
-        editText.setText(TeamPointsCounter.coef3.toString());
+        editText.setText(String.valueOf(TeamPointsCounter.coef3));
         editText = (EditText) findViewById(R.id.trainPoints4);
-        editText.setText(TeamPointsCounter.coef4.toString());
+        editText.setText(String.valueOf(TeamPointsCounter.coef4));
         editText = (EditText) findViewById(R.id.trainPoints5);
-        editText.setText(TeamPointsCounter.coef5.toString());
+        editText.setText(String.valueOf(TeamPointsCounter.coef5));
         editText = (EditText) findViewById(R.id.trainPoints6);
-        editText.setText(TeamPointsCounter.coef6.toString());
+        editText.setText(String.valueOf(TeamPointsCounter.coef6));
     }
 }
