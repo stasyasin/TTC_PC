@@ -39,17 +39,41 @@ public class SettingsActivity extends AppCompatActivity {
     public void saveSettings(View view) {
         EditText editText;
         editText = (EditText) findViewById(R.id.trainPoints1);
-        TeamPointsCounter.coef1 = Integer.parseInt(editText.getText().toString());
+        if (!editText.getText().toString().equals("")) {
+            TeamPointsCounter.coef1 = Integer.parseInt(editText.getText().toString());
+        } else {
+            editText.setText(String.valueOf(TeamPointsCounter.coef1));
+        }
         editText = (EditText) findViewById(R.id.trainPoints2);
-        TeamPointsCounter.coef2 = Integer.parseInt(editText.getText().toString());
+        if (!editText.getText().toString().equals("")) {
+            TeamPointsCounter.coef2 = Integer.parseInt(editText.getText().toString());
+        } else {
+            editText.setText(String.valueOf(TeamPointsCounter.coef2));
+        }
         editText = (EditText) findViewById(R.id.trainPoints3);
-        TeamPointsCounter.coef3 = Integer.parseInt(editText.getText().toString());
+        if (!editText.getText().toString().equals("")) {
+            TeamPointsCounter.coef3 = Integer.parseInt(editText.getText().toString());
+        } else {
+            editText.setText(String.valueOf(TeamPointsCounter.coef3));
+        }
         editText = (EditText) findViewById(R.id.trainPoints4);
-        TeamPointsCounter.coef4 = Integer.parseInt(editText.getText().toString());
+        if (!editText.getText().toString().equals("")) {
+            TeamPointsCounter.coef4 = Integer.parseInt(editText.getText().toString());
+        } else {
+            editText.setText(String.valueOf(TeamPointsCounter.coef4));
+        }
         editText = (EditText) findViewById(R.id.trainPoints5);
-        TeamPointsCounter.coef5 = Integer.parseInt(editText.getText().toString());
+        if (!editText.getText().toString().equals("")) {
+            TeamPointsCounter.coef5 = Integer.parseInt(editText.getText().toString());
+        } else {
+            editText.setText(String.valueOf(TeamPointsCounter.coef5));
+        }
         editText = (EditText) findViewById(R.id.trainPoints6);
-        TeamPointsCounter.coef6 = Integer.parseInt(editText.getText().toString());
+        if (!editText.getText().toString().equals("")) {
+            TeamPointsCounter.coef6 = Integer.parseInt(editText.getText().toString());
+        } else {
+            editText.setText(String.valueOf(TeamPointsCounter.coef6));
+        }
     }
 
     public void defaultSettings(View view) {
