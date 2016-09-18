@@ -19,9 +19,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:orientation="vertical"
             android:weightSum="11">
 
@@ -33,11 +30,11 @@
                 android:weightSum="6">
 
                 <TextView
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:text="Teams" />
 
                 <EditText
@@ -50,7 +47,6 @@
                     android:inputType="textPersonName"
                     android:maxLength="10"
                     android:maxLines="1"
-                    android:nestedScrollingEnabled="false"
                     android:text="@string/teamName1"
                     android:textColor="@color/yellow" />
 
@@ -64,7 +60,6 @@
                     android:inputType="textPersonName"
                     android:maxLength="10"
                     android:maxLines="1"
-                    android:nestedScrollingEnabled="false"
                     android:text="@string/teamName2"
                     android:textColor="@color/blue" />
 
@@ -78,7 +73,6 @@
                     android:inputType="textPersonName"
                     android:maxLength="10"
                     android:maxLines="1"
-                    android:nestedScrollingEnabled="false"
                     android:text="@string/teamName3"
                     android:textColor="@color/black" />
 
@@ -92,7 +86,6 @@
                     android:inputType="textPersonName"
                     android:maxLength="10"
                     android:maxLines="1"
-                    android:nestedScrollingEnabled="false"
                     android:text="@string/teamName4"
                     android:textColor="@color/red" />
 
@@ -106,7 +99,6 @@
                     android:inputType="textPersonName"
                     android:maxLength="10"
                     android:maxLines="1"
-                    android:nestedScrollingEnabled="false"
                     android:text="@string/teamName5"
                     android:textColor="@color/green" />
             </LinearLayout>
@@ -123,7 +115,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/carriage_1" />
+                    android:background="@drawable/carriage_1"
+                    android:contentDescription="@string/carriage_image" />
 
                 <Button
                     android:id="@+id/button11"
@@ -189,7 +182,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/carriage_2" />
+                    android:background="@drawable/carriage_2"
+                    android:contentDescription="@string/carriage_image" />
 
                 <Button
                     android:id="@+id/button12"
@@ -254,7 +248,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/carriage_3" />
+                    android:background="@drawable/carriage_3"
+                    android:contentDescription="@string/carriage_image" />
 
                 <Button
                     android:id="@+id/button13"
@@ -319,7 +314,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/carriage_4" />
+                    android:background="@drawable/carriage_4"
+                    android:contentDescription="@string/carriage_image" />
 
                 <Button
                     android:id="@+id/button14"
@@ -384,7 +380,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/carriage_6" />
+                    android:background="@drawable/carriage_6"
+                    android:contentDescription="@string/carriage_image" />
 
                 <Button
                     android:id="@+id/button15"
@@ -449,7 +446,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/carriage_8" />
+                    android:background="@drawable/carriage_8"
+                    android:contentDescription="@string/carriage_image" />
 
                 <Button
                     android:id="@+id/button16"
@@ -515,7 +513,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/carriage_station" />
+                    android:background="@drawable/carriage_station"
+                    android:contentDescription="@string/carriage_image" />
 
                 <Button
                     android:id="@+id/button17"
@@ -580,7 +579,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/carriage_quests" />
+                    android:background="@drawable/carriage_quests"
+                    android:contentDescription="@string/carriage_image" />
 
                 <EditText
                     android:id="@+id/quest1"
@@ -589,7 +589,7 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:gravity="center"
-                    android:hint="0"
+                    android:hint="@string/zero"
                     android:inputType="numberSigned"
                     android:maxLength="3" />
 
@@ -600,7 +600,7 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:gravity="center"
-                    android:hint="0"
+                    android:hint="@string/zero"
                     android:inputType="numberSigned"
                     android:maxLength="3" />
 
@@ -611,7 +611,7 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:gravity="center"
-                    android:hint="0"
+                    android:hint="@string/zero"
                     android:inputType="numberSigned"
                     android:maxLength="3" />
 
@@ -622,7 +622,7 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:gravity="center"
-                    android:hint="0"
+                    android:hint="@string/zero"
                     android:inputType="numberSigned"
                     android:maxLength="3" />
 
@@ -633,7 +633,7 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:gravity="center"
-                    android:hint="0"
+                    android:hint="@string/zero"
                     android:inputType="numberSigned"
                     android:maxLength="3" />
             </LinearLayout>
@@ -650,7 +650,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/carriage_longest_way" />
+                    android:background="@drawable/carriage_longest_way"
+                    android:contentDescription="@string/carriage_image" />
 
                 <RadioGroup
                     android:id="@+id/RadioGroup"
@@ -717,8 +718,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="refreshPage"
-                    android:background="@drawable/ic_refresh"/>
+                    android:background="@drawable/ic_refresh"
+                    android:onClick="refreshPage" />
 
                 <Button
                     android:id="@+id/calculatePoints"
@@ -726,7 +727,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="6"
                     android:onClick="calculatePoints"
-                    android:text="Calculate Points" />
+                    android:text="@string/calculate_points_button" />
 
             </LinearLayout>
 

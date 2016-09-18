@@ -35,14 +35,13 @@
                     android:layout_weight="1"
                     android:focusable="true"
                     android:focusableInTouchMode="true"
-                    android:text="Length" />
+                    android:text="@string/length_title" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:inputType="number"
-                    android:text="Points" />
+                    android:text="@string/points_title" />
             </LinearLayout>
 
             <LinearLayout
@@ -69,8 +68,7 @@
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="2"
-                    android:maxLines="1"
-                    android:text="@string/zero" />
+                    android:maxLines="1" />
 
             </LinearLayout>
 
@@ -98,8 +96,7 @@
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="2"
-                    android:maxLines="1"
-                    android:text="@string/zero" />
+                    android:maxLines="1" />
 
             </LinearLayout>
 
@@ -127,8 +124,7 @@
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="2"
-                    android:maxLines="1"
-                    android:text="@string/zero" />
+                    android:maxLines="1" />
 
             </LinearLayout>
 
@@ -156,8 +152,7 @@
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="2"
-                    android:maxLines="1"
-                    android:text="@string/zero" />
+                    android:maxLines="1" />
 
             </LinearLayout>
 
@@ -185,8 +180,7 @@
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="2"
-                    android:maxLines="1"
-                    android:text="@string/zero" />
+                    android:maxLines="1" />
 
 
             </LinearLayout>
@@ -215,8 +209,7 @@
                     android:ems="10"
                     android:inputType="number"
                     android:maxLength="2"
-                    android:maxLines="1"
-                    android:text="@string/zero" />
+                    android:maxLines="1" />
 
             </LinearLayout>
 
@@ -233,7 +226,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:onClick="defaultSettings"
-                    android:text="Default" />
+                    android:text="@string/default_button" />
 
                 <TextView
                     android:id="@+id/empty1"
@@ -253,7 +246,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:onClick="saveSettings"
-                    android:text="Save" />
+                    android:text="@string/save_button" />
 
             </LinearLayout>
 
