@@ -1,13 +1,11 @@
 package pointscalculator.ttr_pc;
 
-import android.content.Context;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.view.MotionEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -43,7 +41,21 @@ public class MainActivity extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
+
+            /** Called when a drawer has settled in a completely closed state. */
+            public void onDrawerClosed(View view) {
+                super.onDrawerClosed(view);
+                // Do whatever you want here
+            }
+
+            /** Called when a drawer has settled in a completely open state. */
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+                // Do whatever you want here
+                hideKeyboard(MainActivity.this);
+            }
+        };
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
@@ -226,35 +238,15 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    @Override
-    public boolean dispatchTouchEvent(MotionEvent event) {
 
-        if (event.getAction() == MotionEvent.ACTION_DOWN) {
-
-            /**
-             * It gets into the above IF-BLOCK if anywhere the screen is touched.
-             */
-
-            View v = getCurrentFocus();
-            if (v instanceof EditText) {
-
-
-                /**
-                 * Now, it gets into the above IF-BLOCK if an EditText is already in focus, and you tap somewhere else
-                 * to take the focus away from that particular EditText. It could have 2 cases after tapping:
-                 * 1. No EditText has focus
-                 * 2. Focus is just shifted to the other EditText
-                 */
-
-                Rect outRect = new Rect();
-                v.getGlobalVisibleRect(outRect);
-                if (!outRect.contains((int) event.getRawX(), (int) event.getRawY())) {
-                    v.clearFocus();
-                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                    imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
-                }
-            }
+    public static void hideKeyboard(Activity activity) {
+        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        //Find the currently focused view, so we can grab the correct window token from it.
+        View view = activity.getCurrentFocus();
+        //If no view currently has focus, create a new one, just so we can grab a window token from it
+        if (view == null) {
+            view = new View(activity);
         }
-        return super.dispatchTouchEvent(event);
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 }
