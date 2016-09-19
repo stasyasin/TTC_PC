@@ -1,15 +1,11 @@
 package pointscalculator.ttr_pc;
 
-import android.content.Context;
+import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
-import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.view.MotionEvent;
+import android.support.annotation.NonNull;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -34,8 +30,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     public final static String TEAMS_OBJECTS = "app.java.pointsCalculator.ttr_pc.MainActivity.TEAMS_OBJECTS";
-    public static final String APP_PREFERENCES = "mysettings";
-    private SharedPreferences mSettings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,21 +37,25 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        mSettings = PreferenceManager.getDefaultSharedPreferences(this);//todo delete this?
 
-//
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
+
+            /** Called when a drawer has settled in a completely closed state. */
+            public void onDrawerClosed(View view) {
+                super.onDrawerClosed(view);
+                // Do whatever you want here
+            }
+
+            /** Called when a drawer has settled in a completely open state. */
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+                // Do whatever you want here
+                hideKeyboard(MainActivity.this);
+            }
+        };
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
@@ -101,7 +99,7 @@ public class MainActivity extends AppCompatActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
@@ -113,7 +111,7 @@ public class MainActivity extends AppCompatActivity
             intent.setAction(Intent.ACTION_VIEW);
             intent.setData(Uri.parse("market://search?q=foo"));
             PackageManager pm = getPackageManager();
-            List<ResolveInfo> list = pm.queryIntentActivities(intent, 0);
+            pm.queryIntentActivities(intent, 0);
             Intent i = new Intent(Intent.ACTION_VIEW);
             i.setData(Uri.parse("market://details?id=" + getPackageName()));
             startActivity(i);
@@ -139,7 +137,7 @@ public class MainActivity extends AppCompatActivity
         List<String> blackInputData = getInputData(3);
         List<String> redInputData = getInputData(4);
         List<String> greenInputData = getInputData(5);
-        List<TeamPointsCounter> allTeamsData = new ArrayList<TeamPointsCounter>();
+        List<TeamPointsCounter> allTeamsData = new ArrayList<>();
 
         allTeamsData.add(new TeamPointsCounter(yellowInputData));
         allTeamsData.add(new TeamPointsCounter(blueInputData));
@@ -178,11 +176,11 @@ public class MainActivity extends AppCompatActivity
                 break;
         }
 
-        button.setText(value.toString());
+        button.setText(String.valueOf(value));
     }
 
     private List<String> getInputData(int columnInd) {
-        List<String> inputData = new ArrayList<String>();
+        List<String> inputData = new ArrayList<>();
         EditText editText = (EditText) findViewById(getResources().getIdentifier("teamName" + columnInd, "id", this.getPackageName()));
         Integer textColor = editText.getCurrentTextColor();
         if (editText.getText().toString().equals("")) {
@@ -240,35 +238,15 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    @Override
-    public boolean dispatchTouchEvent(MotionEvent event) {
 
-        if (event.getAction() == MotionEvent.ACTION_DOWN) {
-
-            /**
-             * It gets into the above IF-BLOCK if anywhere the screen is touched.
-             */
-
-            View v = getCurrentFocus();
-            if (v instanceof EditText) {
-
-
-                /**
-                 * Now, it gets into the above IF-BLOCK if an EditText is already in focus, and you tap somewhere else
-                 * to take the focus away from that particular EditText. It could have 2 cases after tapping:
-                 * 1. No EditText has focus
-                 * 2. Focus is just shifted to the other EditText
-                 */
-
-                Rect outRect = new Rect();
-                v.getGlobalVisibleRect(outRect);
-                if (!outRect.contains((int) event.getRawX(), (int) event.getRawY())) {
-                    v.clearFocus();
-                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                    imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
-                }
-            }
+    public static void hideKeyboard(Activity activity) {
+        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        //Find the currently focused view, so we can grab the correct window token from it.
+        View view = activity.getCurrentFocus();
+        //If no view currently has focus, create a new one, just so we can grab a window token from it
+        if (view == null) {
+            view = new View(activity);
         }
-        return super.dispatchTouchEvent(event);
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 }

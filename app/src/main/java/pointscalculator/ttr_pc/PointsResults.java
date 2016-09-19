@@ -18,21 +18,23 @@ public class PointsResults extends AppCompatActivity {
 
         AdView mAdView = (AdView) findViewById(R.id.adView);
 //        mAdView.setAdSize(AdSize.SMART_BANNER);//Размер баннера
-        AdRequest adRequest = new AdRequest.Builder().build();//todo Prod
+        AdRequest adRequest = new AdRequest.Builder().build();
 //        AdRequest adRequest = new com.google.android.gms.ads.AdRequest.Builder()
 //                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-//                .addTestDevice("A2FAD940C1B8A8B03605604D735E629E").build();// testmode
+//                .addTestDevice("A2FAD940C1B8A8B03605604D735E629E").build();// testMode
         mAdView.loadAd(adRequest);
 
         Intent intent = getIntent();
         List<TeamPointsCounter> allTeamsData = (List<TeamPointsCounter>) intent.getExtras().getSerializable(MainActivity.TEAMS_OBJECTS);
 
-        for (int i = 1; i <= allTeamsData.size(); i++) {
-            TextView teamName = (TextView) findViewById(getResources().getIdentifier("teamName" + i, "id", this.getPackageName()));
-            teamName.setText(allTeamsData.get(i - 1).name);
-            teamName.setTextColor(allTeamsData.get(i - 1).textColor);
-            TextView teamResults = (TextView) findViewById(getResources().getIdentifier("teamResult" + i, "id", this.getPackageName()));
-            teamResults.setText(allTeamsData.get(i - 1).teamPointsResult.toString());
+        if (allTeamsData != null) {
+            for (int i = 1; i <= allTeamsData.size(); i++) {
+                TextView teamName = (TextView) findViewById(getResources().getIdentifier("teamName" + i, "id", this.getPackageName()));
+                teamName.setText(allTeamsData.get(i - 1).name);
+                teamName.setTextColor(allTeamsData.get(i - 1).textColor);
+                TextView teamResults = (TextView) findViewById(getResources().getIdentifier("teamResult" + i, "id", this.getPackageName()));
+                teamResults.setText(String.valueOf(allTeamsData.get(i - 1).teamPointsResult));
+            }
         }
     }
 }
