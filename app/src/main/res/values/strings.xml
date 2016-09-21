@@ -27,7 +27,8 @@
     <string name="information_text3e">- Chose team with longest way</string>
     <string name="information_text3f">- Click on "Calculate points" button to see your results.</string>
     <string name="information_text3g">- Share results with your friends!</string>
-    <string name="information_text6">You can use Refresh button to clean main page.</string>
+    <string name="information_text6a">You can use Refresh button to clean main page.</string>
+    <string name="information_text6b">Or you can Tap buttons several times. Ways are refreshing after 10, stations after 3 taps.</string>
     <string name="information_text7">You can use Settings page to configure points amount for different way lengths.
     </string>
     <string name="information_text8">Enjoy your game!</string>
