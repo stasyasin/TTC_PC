@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Ticket to Ride Calculator</string>
+    <string name="app_name">Tickets to Ride Calculator</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -17,7 +17,7 @@
     <string name="banner_ad_unit_id1">ca-app-pub-8781425797517197/5678816268</string>
     <string name="banner_ad_unit_id2">ca-app-pub-8781425797517197/5243007464</string>
     <string name="banner_ad_unit_id3">ca-app-pub-8781425797517197/6719740663</string>
-    <string name="information_text1a">Having fun with Ticket to Ride? But boring to calculate points after the game???</string>
+    <string name="information_text1a">Having fun with Tickets to Ride? But boring to calculate points after the game???</string>
     <string name="information_text1b">This application will help you to have ultimate fun of the game!</string>
     <string name="information_text2">How to use:</string>
     <string name="information_text3a">- Pick names of your teams</string>
