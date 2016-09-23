@@ -1,4 +1,4 @@
-package pointscalculator.ttr_pc;
+package pointscalculator.ttr_calculator;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
