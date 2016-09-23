@@ -1,4 +1,4 @@
-package pointscalculator.ttr_pc;
+package pointscalculator.ttr_calculator;
 
 import android.app.Activity;
 import android.content.Intent;
