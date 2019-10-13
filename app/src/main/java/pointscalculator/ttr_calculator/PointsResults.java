@@ -16,14 +16,6 @@ public class PointsResults extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_points_results);
 
-        AdView mAdView = (AdView) findViewById(R.id.adView);
-//        mAdView.setAdSize(AdSize.SMART_BANNER);//Размер баннера
-        AdRequest adRequest = new AdRequest.Builder().build();
-//        AdRequest adRequest = new com.google.android.gms.ads.AdRequest.Builder()
-//                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-//                .addTestDevice("A2FAD940C1B8A8B03605604D735E629E").build();// testMode
-        mAdView.loadAd(adRequest);
-
         Intent intent = getIntent();
         List<TeamPointsCounter> allTeamsData = (List<TeamPointsCounter>) intent.getExtras().getSerializable(MainActivity.TEAMS_OBJECTS);
 

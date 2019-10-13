@@ -14,13 +14,6 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-//        AdRequest adRequest = new com.google.android.gms.ads.AdRequest.Builder()
-//                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-//                .addTestDevice("A2FAD940C1B8A8B03605604D735E629E").build();// testMode
-        mAdView.loadAd(adRequest);
-
         EditText teamResults;
         teamResults = (EditText) findViewById(R.id.trainPoints1);
         teamResults.setText(String.valueOf(TeamPointsCounter.coef1));
