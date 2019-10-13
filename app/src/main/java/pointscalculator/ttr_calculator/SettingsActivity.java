@@ -1,11 +1,9 @@
 package pointscalculator.ttr_calculator;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-
-import com.google.android.gms.ads.*;
 
 public class SettingsActivity extends AppCompatActivity {
 
